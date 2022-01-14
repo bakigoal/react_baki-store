@@ -9,7 +9,7 @@ it('renders without crashing', () => {
     ReactDOM.unmountComponentAtNode(div);
 });
 
-test('renders kia car', () => {
+test('renders app', () => {
     render(<App />);
     const linkElement = screen.getByText(/React-Bootstrap/i);
     expect(linkElement).toBeInTheDocument();
