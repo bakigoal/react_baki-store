@@ -7,9 +7,9 @@ import Header from "../header/Header";
 export default function App() {
     return (
         <Router>
-            <Header/>
-
             <Container className="p-3">
+                <Header/>
+
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="users" element={<Users/>}/>
