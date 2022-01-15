@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
-import {useTitle} from "../header/useTitle";
+import {useTitle} from "../utils/useTitle";
 
 function AlertDismissibleExample() {
     const [show, setShow] = useState(false);

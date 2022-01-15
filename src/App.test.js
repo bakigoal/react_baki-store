@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import ReactDOM from 'react-dom';
-import App from '../home/Home';
+import App from './pages/Home';
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
