@@ -5,7 +5,7 @@ import {useLocation} from "react-router-dom";
 
 const Header = () => {
     return (
-        <Navbar bg="light" expand="lg" className="border-bottom shadow-sm mb-3">
+        <Navbar fluid="true" bg="light" expand="lg" sticky="top" className="border-bottom shadow-sm mb-3">
             <Container>
                 <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
