@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
+import {useTitle} from "../header/useTitle";
 
 function AlertDismissibleExample() {
     const [show, setShow] = useState(false);
@@ -31,26 +32,29 @@ function AlertDismissibleExample() {
     );
 }
 
-const Home = () => (
-    <Container className="p-3">
-        <Container className="pb-1 p-5 mb-4 bg-light rounded-3">
-            <h1 className="header">Welcome To React-Bootstrap</h1>
-            <h2 className="header">Using Sass with custom theming</h2>
-            <AlertDismissibleExample/>
-            <hr/>
-            <p>
-                You can check further in information on the official Bootstrap docs{' '}
-                <a
-                    href="https://getbootstrap.com/docs/4.3/getting-started/theming/#importing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    here
-                </a>
-                .
-            </p>
+const Home = () => {
+    useTitle("Home")
+    return (
+        <Container className="p-3">
+            <Container className="pb-1 p-5 mb-4 bg-light rounded-3">
+                <h1 className="header">Welcome To React-Bootstrap</h1>
+                <h2 className="header">Using Sass with custom theming</h2>
+                <AlertDismissibleExample/>
+                <hr/>
+                <p>
+                    You can check further in information on the official Bootstrap docs{' '}
+                    <a
+                        href="https://getbootstrap.com/docs/4.3/getting-started/theming/#importing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        here
+                    </a>
+                    .
+                </p>
+            </Container>
         </Container>
-    </Container>
-);
+    );
+};
 
 export default Home;
