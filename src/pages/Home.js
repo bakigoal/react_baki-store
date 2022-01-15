@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-
-import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import {useTitle} from "../utils/useTitle";
@@ -10,25 +8,23 @@ const title = "Home"
 const Home = () => {
     useTitle(title)
     return (
-        <Container className="p-3">
-            <Container className="pb-1 p-5 mb-4 bg-light rounded-3">
-                <h1 className="header">Welcome To React-Bootstrap</h1>
-                <h2 className="header">Using Sass with custom theming</h2>
-                <AlertDismissibleExample/>
-                <hr/>
-                <p>
-                    You can check further in information on the official Bootstrap docs{' '}
-                    <a
-                        href="https://getbootstrap.com/docs/4.3/getting-started/theming/#importing"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        here
-                    </a>
-                    .
-                </p>
-            </Container>
-        </Container>
+        <div className="mb-4">
+            <h1>Welcome To React-Bootstrap</h1>
+            <h2>Using Sass with custom theming</h2>
+            <AlertDismissibleExample/>
+            <hr/>
+            <p>
+                You can check further in information on the official Bootstrap docs{' '}
+                <a
+                    href="https://getbootstrap.com/docs/4.3/getting-started/theming/#importing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    here
+                </a>
+                .
+            </p>
+        </div>
     );
 };
 
