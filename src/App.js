@@ -7,12 +7,12 @@ import Footer from "./layouts/Footer";
 
 export default function App() {
     return (
-        <Container className="p-3">
-            <Router>
+        <Router>
+            <Container className="p-3">
                 <Header/>
                 <Main/>
                 <Footer/>
-            </Router>
-        </Container>
+            </Container>
+        </Router>
     );
 }
