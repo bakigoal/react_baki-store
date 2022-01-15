@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import {useTitle} from "../utils/useTitle";
+import InfoButton from "../components/InfoButton";
 
 const title = "Home"
 
@@ -147,9 +147,11 @@ const AlertDismissibleExample = () => {
         );
     }
     return (
-        <Button variant="info" onClick={() => setShow(true)}>
-            Show Custom Styled Alert
-        </Button>
+        <div>
+            <InfoButton onClick={() => setShow(true)}>
+                Show Custom Styled Alert
+            </InfoButton>
+        </div>
     );
 };
 

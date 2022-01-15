@@ -1,9 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import React from "react";
 
-const InfoButton = () => {
+const InfoButton = (props) => {
     return (
-        <Button variant="info"/>
+        <Button variant="info" onClick={props.onClick}>{props.children}</Button>
     )
 }
 
