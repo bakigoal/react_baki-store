@@ -1,0 +1,36 @@
+.footer {
+
+  background-color: #f0f0f0;
+
+  .bg6 {
+    background-color: #f0f0f0;
+  }
+
+  ul, li {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .email-form {
+    position: relative;
+    border-bottom: 1px solid #cccccc;
+    max-width: 300px;
+  }
+
+  input {
+    outline: none;
+    border: none !important;
+  }
+
+  .subscribe-button{
+    width: 179px;
+
+    button {
+      border-radius: 23px;
+      width: 100%;
+      height: 46px;
+      text-transform: uppercase;
+    }
+  }
+}

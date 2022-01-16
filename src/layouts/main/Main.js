@@ -1,7 +1,7 @@
 import {Route, Routes} from "react-router-dom";
-import Home from "../pages/Home";
-import Users from "../pages/Users";
-import About from "../pages/About";
+import Home from "../../pages/Home";
+import Users from "../../pages/Users";
+import About from "../../pages/About";
 import React, {useEffect} from "react";
 
 const Main = () => (

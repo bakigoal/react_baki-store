@@ -2,4 +2,34 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+
+  a {
+    text-decoration: none;
+  }
+
+  .social-icon-link {
+    color: #888888;
+  }
+
+  .s-text12 {
+    font-weight: bold;
+    font-size: 15px;
+    color: #222222;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  .s-text7 {
+    font-weight: normal;
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.8;
+  }
+
+  .s-text8 {
+    font-size: 13px;
+    color: #888888;
+    line-height: 1.8;
+  }
+
 }

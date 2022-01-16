@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import {Form, FormControl, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import React from "react";
 import {useLocation} from "react-router-dom";
-import logo from '../assets/logo.svg'
+import logo from '../../assets/logo.svg'
 import Button from "react-bootstrap/Button";
 
 const Header = () => {
