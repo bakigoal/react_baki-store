@@ -1,25 +1,13 @@
 import {useTitle} from "../utils/useTitle";
 import React from "react";
+import User from "../model/User";
 
 const title = "Users";
 
 const list = [
-    {
-        name: 'User 1',
-        age: 23
-    },
-    {
-        name: 'User 2',
-        age: 32
-    },
-    {
-        name: 'User 3',
-        age: 21
-    },
-    {
-        name: 'User 4',
-        age: 45
-    },
+    new User("John", "Doe", 99),
+    new User("John", "Snow", 35),
+    new User("Peter", "Pan", 77)
 ];
 
 const Users = () => {
@@ -31,7 +19,7 @@ const Users = () => {
 const userBlock = user => {
     return (
         <div>
-            <h3>{user.name}</h3>
+            <h3>{user.getName()}</h3>
             <p>Age: {user.age}</p>
         </div>
     );
