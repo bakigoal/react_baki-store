@@ -1,10 +1,8 @@
 import {useEffect} from "react";
 
-const DEFAULT_TITLE = "My App Title";
-
 const Page = props => {
     useEffect(() => {
-        document.title = props.title || DEFAULT_TITLE;
+        props.title && (document.title = props.title);
     }, [props.title]);
     return props.children;
 };
