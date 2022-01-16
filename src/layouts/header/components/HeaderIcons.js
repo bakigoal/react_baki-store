@@ -3,16 +3,16 @@ import iconHeader2 from "../../../assets/images/icons/icon-header-02.png";
 import React from "react";
 
 const HeaderIcons = () => (
-    <div className="header-icons">
+    <div className="header-icons d-flex">
         <a href="#" className="header-wrapicon1 dis-block">
             <img src={iconHeader1} className="header-icon1" alt="ICON"/>
         </a>
 
-        <span className="linedivide1"/>
+        <span className="line-divider1"/>
 
-        <div className="header-wrapicon2">
+        <div className="header-wrap-icon">
             <img src={iconHeader2} className="header-icon1" alt="ICON"/>
-            <span className="header-icons-noti">3</span>
+            <span className="icons-badge">3</span>
         </div>
     </div>
 )

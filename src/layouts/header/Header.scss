@@ -3,4 +3,30 @@
   nav {
     min-height: 80px;
   }
+
+  .header-wrap-icon {
+    height: 27px;
+    position: relative;
+
+    .icons-badge {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #111111;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      position: absolute;
+      top: 0;
+      right: -10px;
+    }
+  }
+
 }
