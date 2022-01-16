@@ -1,9 +1,18 @@
 /* make the customizations */
-//$theme-colors: (
-//        "info": tomato,
-//        "danger": teal
-// ... other colors
-//);
+$theme-colors: (
+        "primary": blue,
+        "secondary": gray,
+        "danger": red,
+        "warning": orange,
+        "success": green,
+        "info": #6ad7f9,
+        "light": #f8f9fa,
+        "dark": #20232a
+);
+
+// Default variable overrides
+$body-bg: #fff;
+$body-color: #212529;
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
