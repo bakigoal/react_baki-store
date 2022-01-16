@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 const Header = () => {
     return (
         <header>
-            <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="border-bottom shadow-sm mb-3">
+            <Navbar bg="light" variant="light" expand="lg" sticky="top" className="border-bottom shadow-sm mb-3">
                 <Container fluid>
                     <Navbar.Brand href="/">
                         <img src={logo}

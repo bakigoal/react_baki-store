@@ -52,7 +52,7 @@ const paymentLinks = [
 
 const Footer = () => {
     return (
-        <footer className="p-5 border-top footer">
+        <footer className="p-5 border-top footer bg-light">
             <Row className="pb-5">
                 <div className="col-xl-4 pt-3">
                     <FooterSocials links={socialLinks}/>
