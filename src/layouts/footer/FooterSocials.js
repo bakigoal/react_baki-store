@@ -2,7 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebookF, faInstagram, faPinterestP, faSnapchatGhost, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 
-const FooterContacts = () => (
+const FooterSocials = () => (
     <div>
         <h4 className="s-text12 pb-3">
             GET IN TOUCH
@@ -35,4 +35,4 @@ const FooterContacts = () => (
     </div>
 )
 
-export default FooterContacts
+export default FooterSocials

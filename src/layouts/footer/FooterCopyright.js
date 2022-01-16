@@ -6,7 +6,7 @@ import discover from "../../assets/images/icons/discover.png";
 import React from "react";
 
 
-const FooterAuthor = () => (
+const FooterCopyright = () => (
     <div className="ps-2 pe-2 text-center">
         <a href="#" className="pe-1">
             <img className="h-size2" src={paypal} alt="IMG-PAYPAL"/>
@@ -36,4 +36,4 @@ const FooterAuthor = () => (
     </div>
 )
 
-export default FooterAuthor
+export default FooterCopyright
