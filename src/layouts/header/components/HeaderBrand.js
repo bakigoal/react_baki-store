@@ -1,5 +1,5 @@
 import {Navbar} from "react-bootstrap";
-import logo from "../../assets/images/icons/logo.png";
+import logo from "../../../assets/images/icons/logo.png";
 import React from "react";
 
 const HeaderBrand = () => (

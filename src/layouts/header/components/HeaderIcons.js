@@ -1,5 +1,5 @@
-import iconHeader1 from "../../assets/images/icons/icon-header-01.png";
-import iconHeader2 from "../../assets/images/icons/icon-header-02.png";
+import iconHeader1 from "../../../assets/images/icons/icon-header-01.png";
+import iconHeader2 from "../../../assets/images/icons/icon-header-02.png";
 import React from "react";
 
 const HeaderIcons = () => (
