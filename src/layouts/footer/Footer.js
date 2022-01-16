@@ -54,27 +54,27 @@ const Footer = () => {
     return (
         <footer className="p-5 border-top footer">
             <Row className="pb-5">
-                <div className="col-4 pt-3">
+                <div className="col-xl-4 pt-3">
                     <FooterSocials links={socialLinks}/>
                 </div>
 
-                <div className="col-5 pt-3">
+                <div className="col-xl-5">
                     <Row>
-                        <div className="col-4">
+                        <div className="col-sm-4 pt-3">
                             <FooterLinkList title="Categories" links={categories}/>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-sm-4 pt-3">
                             <FooterLinkList title="Links" links={links}/>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-sm-4 pt-3">
                             <FooterLinkList title="Links" links={helpLinks}/>
                         </div>
                     </Row>
                 </div>
 
-                <div className="col-3 pt-3">
+                <div className="col-xl-3 pt-3">
                     <FooterEmail/>
                 </div>
             </Row>
