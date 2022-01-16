@@ -1,4 +1,4 @@
-import {useTitle} from "../utils/useTitle";
+import {changeTitle} from "../utils/TitleUtil";
 import React from "react";
 import User from "../model/User";
 import Container from "react-bootstrap/Container";
@@ -7,7 +7,7 @@ const title = "Users";
 
 const Users = () => {
 
-    useTitle(title)
+    changeTitle(title)
     return (
         <Container>
             <ul>

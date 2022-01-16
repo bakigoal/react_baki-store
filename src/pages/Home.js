@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import Alert from 'react-bootstrap/Alert';
-import {useTitle} from "../utils/useTitle";
+import {changeTitle} from "../utils/TitleUtil";
 import InfoButton from "../components/InfoButton";
 import Container from "react-bootstrap/Container";
 
 const title = "Home"
 
 const Home = () => {
-    useTitle(title)
+    changeTitle(title)
     return (
         <Container className="mb-4">
             <h1>Welcome To React-Bootstrap</h1>
