@@ -11,8 +11,8 @@ const FooterSocials = ({links}) => (
 
         <div>
             <p className="s-text7 w-size27">
-                Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call
-                us on (+1) 96 716 6879
+                Any questions? Let us know in store at
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </p>
 
             <div className="d-flex pt-3">
