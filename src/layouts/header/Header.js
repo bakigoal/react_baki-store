@@ -9,14 +9,14 @@ import HeaderIcons from "./components/HeaderIcons";
 const Header = () => {
     return (
         <header className="header">
-            <Navbar bg="white" variant="light" expand="lg" sticky="top" className="border-bottom shadow-sm mb-3">
+            <Navbar collapseOnSelect bg="white" variant="light" expand="lg" sticky="top" className="border-bottom shadow-sm mb-3">
                 <Container fluid>
                     <HeaderBrand/>
-                    <Navbar.Collapse id="navbarScroll">
+                    <HeaderIcons />
+                    <Navbar.Toggle aria-controls="navbarScroll" className="header-toggle"/>
+                    <Navbar.Collapse id="navbarScroll" className="header-collapse">
                         <HeaderNavigation/>
                     </Navbar.Collapse>
-                    <HeaderIcons/>
-                    <Navbar.Toggle aria-controls="navbarScroll"/>
                 </Container>
             </Navbar>
         </header>

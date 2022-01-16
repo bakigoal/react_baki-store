@@ -3,7 +3,7 @@ import logo from "../../../assets/images/icons/logo.png";
 import React from "react";
 
 const HeaderBrand = () => (
-    <Navbar.Brand href="/">
+    <Navbar.Brand href="/" className="header-brand">
         <img src={logo}
              alt=""
              height="27"

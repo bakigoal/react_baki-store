@@ -29,4 +29,19 @@
     }
   }
 
+  /* Large screens */
+  @media all and (min-width: 992px) {
+    .header-brand {
+      order: 1;
+    }
+    .header-toggle {
+      order: 2;
+    }
+    .header-collapse {
+      order: 3;
+    }
+    .header-icons {
+      order: 4;
+    }
+  }
 }

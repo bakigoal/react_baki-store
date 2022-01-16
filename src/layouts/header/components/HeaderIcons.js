@@ -4,7 +4,7 @@ import React from "react";
 
 const HeaderIcons = () => (
     <div className="header-icons d-flex">
-        <a href="#" className="header-wrapicon1 dis-block">
+        <a href="#" className="header-wrap-icon dis-block">
             <img src={iconHeader1} className="header-icon1" alt="ICON"/>
         </a>
 
