@@ -1,8 +1,9 @@
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faFacebookF, faInstagram, faPinterestP, faSnapchatGhost, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import React from "react";
+import FaIconLink from "../../components/FaIconLink";
+import UuidGenerator from "../../utils/UuidGenerator";
 
-const FooterSocials = () => (
+
+const FooterSocials = ({links}) => (
     <div>
         <h4 className="s-text12 pb-3">
             GET IN TOUCH
@@ -15,21 +16,9 @@ const FooterSocials = () => (
             </p>
 
             <div className="d-flex pt-3">
-                <a href="#" className="pe-3 fs-5 social-icon-link">
-                    <FontAwesomeIcon icon={faFacebookF}/>
-                </a>
-                <a href="#" className="pe-3 fs-5 social-icon-link">
-                    <FontAwesomeIcon icon={faInstagram}/>
-                </a>
-                <a href="#" className="pe-3 fs-5 social-icon-link">
-                    <FontAwesomeIcon icon={faPinterestP}/>
-                </a>
-                <a href="#" className="pe-3 fs-5 social-icon-link">
-                    <FontAwesomeIcon icon={faSnapchatGhost}/>
-                </a>
-                <a href="#" className="pe-3 fs-5 social-icon-link">
-                    <FontAwesomeIcon icon={faYoutube}/>
-                </a>
+                {links.map(link => (
+                    <FaIconLink link={link} key={UuidGenerator.uuid4()}/>
+                ))}
             </div>
         </div>
     </div>

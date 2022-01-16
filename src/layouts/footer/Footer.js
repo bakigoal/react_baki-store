@@ -5,34 +5,57 @@ import FooterSocials from "./FooterSocials";
 import FooterEmail from "./FooterEmail";
 import FooterCopyright from "./FooterCopyright";
 import FooterLinkList from "./FooterLinkList";
+import {faFacebookF, faInstagram, faPinterestP, faSnapchatGhost, faYoutube} from "@fortawesome/free-brands-svg-icons";
+import paypal from "../../assets/images/icons/paypal.png";
+import visa from "../../assets/images/icons/visa.png";
+import mastercard from "../../assets/images/icons/mastercard.png";
+import express from "../../assets/images/icons/express.png";
+import discover from "../../assets/images/icons/discover.png";
+
+const socialLinks = [
+    {icon: faFacebookF, url: "#"},
+    {icon: faInstagram, url: "#"},
+    {icon: faPinterestP, url: "#"},
+    {icon: faSnapchatGhost, url: "#"},
+    {icon: faYoutube, url: "#"},
+]
 
 const categories = [
-    {id: 1, title: "Men", url: "#"},
-    {id: 2, title: "Women", url: "#"},
-    {id: 3, title: "Dresses", url: "#"},
-    {id: 4, title: "Sunglasses", url: "#"},
+    {title: "Men", url: "#"},
+    {title: "Women", url: "#"},
+    {title: "Dresses", url: "#"},
+    {title: "Sunglasses", url: "#"},
 ]
 
 const links = [
-    {id: 1, title: "Search", url: "#"},
-    {id: 2, title: "About Us", url: "#"},
-    {id: 3, title: "Contact Us", url: "#"},
-    {id: 4, title: "Returns", url: "#"},
+    {title: "Search", url: "#"},
+    {title: "About Us", url: "#"},
+    {title: "Contact Us", url: "#"},
+    {title: "Returns", url: "#"},
 ]
 
 const helpLinks = [
-    {id: 1, title: "Track Order", url: "#"},
-    {id: 2, title: "Returns", url: "#"},
-    {id: 3, title: "Shipping", url: "#"},
-    {id: 4, title: "FAQs", url: "#"},
+    {title: "Track Order", url: "#"},
+    {title: "Returns", url: "#"},
+    {title: "Shipping", url: "#"},
+    {title: "FAQs", url: "#"},
 ]
+
+const donatLinks = [
+    {icon: paypal, url: "#"},
+    {icon: visa, url: "#"},
+    {icon: mastercard, url: "#"},
+    {icon: express, url: "#"},
+    {icon: discover, url: "#"},
+]
+
 
 const Footer = () => {
     return (
         <footer className="p-5 border-top footer">
             <Row className="pb-5">
                 <div className="col-4 pt-3">
-                    <FooterSocials/>
+                    <FooterSocials links={socialLinks}/>
                 </div>
 
                 <div className="col-5 pt-3">
@@ -56,7 +79,7 @@ const Footer = () => {
                 </div>
             </Row>
 
-            <FooterCopyright/>
+            <FooterCopyright donatLinks={donatLinks}/>
 
         </footer>
     )

@@ -1,32 +1,13 @@
-import paypal from "../../assets/images/icons/paypal.png";
-import visa from "../../assets/images/icons/visa.png";
-import mastercard from "../../assets/images/icons/mastercard.png";
-import express from "../../assets/images/icons/express.png";
-import discover from "../../assets/images/icons/discover.png";
 import React from "react";
+import UuidGenerator from "../../utils/UuidGenerator";
 
-
-const FooterCopyright = () => (
+const FooterCopyright = ({donatLinks}) => (
     <div className="ps-2 pe-2 text-center">
-        <a href="#" className="pe-1">
-            <img className="h-size2" src={paypal} alt="IMG-PAYPAL"/>
-        </a>
-
-        <a href="#" className="pe-1">
-            <img className="h-size2" src={visa} alt="IMG-VISA"/>
-        </a>
-
-        <a href="#" className="pe-1">
-            <img className="h-size2" src={mastercard} alt="IMG-MASTERCARD"/>
-        </a>
-
-        <a href="#" className="pe-1">
-            <img className="h-size2" src={express} alt="IMG-EXPRESS"/>
-        </a>
-
-        <a href="#" className="pe-1">
-            <img className="h-size2" src={discover} alt="IMG-DISCOVER"/>
-        </a>
+        {donatLinks.map(link => (
+            <a href={link.url} className="pe-1" key={UuidGenerator.uuid4()}>
+                <img className="h-size2" src={link.icon} alt="IMG-PAYPAL"/>
+            </a>
+        ))}
 
         <div className="t-center s-text8 pt-3">
             Copyright © 2022 All rights reserved. | This template is made with <i className="fa fa-heart-o"
