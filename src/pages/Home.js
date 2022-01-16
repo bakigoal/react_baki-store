@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import Alert from 'react-bootstrap/Alert';
 import {useTitle} from "../utils/useTitle";
 import InfoButton from "../components/InfoButton";
+import Container from "react-bootstrap/Container";
 
 const title = "Home"
 
 const Home = () => {
     useTitle(title)
     return (
-        <div className="mb-4">
+        <Container className="mb-4">
             <h1>Welcome To React-Bootstrap</h1>
             <h2>Using Sass with custom theming</h2>
             <AlertDismissibleExample/>
@@ -24,7 +25,7 @@ const Home = () => {
                 </a>
                 .
             </p>
-        </div>
+        </Container>
     );
 };
 

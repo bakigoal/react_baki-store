@@ -1,6 +1,7 @@
 import {useTitle} from "../utils/useTitle";
 import React from "react";
 import User from "../model/User";
+import Container from "react-bootstrap/Container";
 
 const title = "Users";
 
@@ -8,9 +9,11 @@ const Users = () => {
 
     useTitle(title)
     return (
-        <ul>
-            {users()}
-        </ul>
+        <Container>
+            <ul>
+                {users()}
+            </ul>
+        </Container>
     )
 }
 
