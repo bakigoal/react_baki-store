@@ -1,6 +1,6 @@
 import React from "react";
-import FaIconLink from "../../components/FaIconLink";
-import UuidGenerator from "../../utils/UuidGenerator";
+import FaIconLink from "../../../components/FaIconLink";
+import UuidGenerator from "../../../utils/UuidGenerator";
 
 
 const FooterSocials = ({links}) => (

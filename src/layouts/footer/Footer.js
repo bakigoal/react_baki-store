@@ -1,17 +1,17 @@
 import React from "react";
 import './Footer.scss'
 import {Row} from "react-bootstrap";
-import FooterSocials from "./FooterSocials";
-import FooterEmail from "./FooterEmail";
-import FooterCopyright from "./FooterCopyright";
-import FooterLinkList from "./FooterLinkList";
+import FooterSocials from "./components/FooterSocials";
+import FooterEmail from "./components/FooterEmail";
+import FooterCopyright from "./components/FooterCopyright";
+import FooterLinkList from "./components/FooterLinkList";
 import {faFacebookF, faInstagram, faPinterestP, faSnapchatGhost, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import paypal from "../../assets/images/icons/paypal.png";
 import visa from "../../assets/images/icons/visa.png";
 import mastercard from "../../assets/images/icons/mastercard.png";
 import express from "../../assets/images/icons/express.png";
 import discover from "../../assets/images/icons/discover.png";
-import FooterPayments from "./FooterPayments";
+import FooterPayments from "./components/FooterPayments";
 
 const socialLinks = [
     {icon: faFacebookF, url: "#"},

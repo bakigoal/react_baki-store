@@ -1,5 +1,5 @@
 import React from "react";
-import UuidGenerator from "../../utils/UuidGenerator";
+import UuidGenerator from "../../../utils/UuidGenerator";
 
 const FooterLinkList = ({title, links}) => {
 
