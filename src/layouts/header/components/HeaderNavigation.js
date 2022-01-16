@@ -5,8 +5,7 @@ import React from "react";
 const HeaderNavigation = () => (
     <Nav
         activeKey={useLocation().pathname}
-        className="me-auto my-2 my-lg-0"
-        style={{maxHeight: '100px'}}>
+        className="me-auto">
         <Nav.Link href="/">Home</Nav.Link>
         <Nav.Link href="/about">About</Nav.Link>
         <Nav.Link href="/users">Users</Nav.Link>
