@@ -25,18 +25,14 @@ const list = [
 const Users = () => {
     useTitle(title)
 
-    let userBlock = user => {
-        return (
-            <div>
-                <h3>{user.name}</h3>
-                <p>Age: {user.age}</p>
-            </div>
-        );
-    }
+    return list.map(user => userBlock(user));
+}
 
+const userBlock = user => {
     return (
         <div>
-            {list.map(user => userBlock(user))}
+            <h3>{user.name}</h3>
+            <p>Age: {user.age}</p>
         </div>
     );
 }
