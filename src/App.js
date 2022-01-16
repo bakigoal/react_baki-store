@@ -5,7 +5,7 @@ import Footer from "./layouts/Footer";
 import Container from "react-bootstrap/Container";
 import MainContent from "./layouts/MainContent";
 
-export default () => (
+const App = () => (
     <Router>
         <Container fluid="true" className="d-flex flex-column min-vh-100">
             <Header/>
@@ -16,3 +16,5 @@ export default () => (
         </Container>
     </Router>
 )
+
+export default App
