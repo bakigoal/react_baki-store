@@ -9,14 +9,14 @@ const Main = () => {
     return (
         <main className="flex-grow-1">
             <Routes>
-                <Route path="/" element={page("Home", Home)}/>
-                <Route path="users" element={page("Users", Users)}/>
-                <Route path="about" element={page("About", About)}/>
+                <Route path="/" element={page("Home", <Home/>)}/>
+                <Route path="users" element={page("Users", <Users/>)}/>
+                <Route path="about" element={page("About", <About/>)}/>
             </Routes>
         </main>
     )
 }
 
-const page = (title, Component) => <Page title={title}><Component/></Page>;
+const page = (title, component) => <Page title={title}>{component}</Page>;
 
 export default Main
