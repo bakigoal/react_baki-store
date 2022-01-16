@@ -1,6 +1,5 @@
 import UuidGenerator from "../utils/UuidGenerator";
 
-
 export default class User {
     constructor(firstName, lastName, age) {
         this.id = UuidGenerator.uuid4()
