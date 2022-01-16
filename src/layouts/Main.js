@@ -4,12 +4,14 @@ import Users from "../pages/Users";
 import About from "../pages/About";
 import React, {useEffect} from "react";
 
-const MainContent = () => (
-    <Routes>
-        <Route path="/" element={page("Home", <Home/>)}/>
-        <Route path="users" element={page("Users", <Users/>)}/>
-        <Route path="about" element={page("About", <About/>)}/>
-    </Routes>
+const Main = () => (
+    <main>
+        <Routes>
+            <Route path="/" element={page("Home", <Home/>)}/>
+            <Route path="users" element={page("Users", <Users/>)}/>
+            <Route path="about" element={page("About", <About/>)}/>
+        </Routes>
+    </main>
 );
 
 const page = (title, component) => <Page title={title}>{component}</Page>;
@@ -21,4 +23,4 @@ const Page = props => {
     return props.children;
 };
 
-export default MainContent
+export default Main
