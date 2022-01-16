@@ -11,6 +11,7 @@ import visa from "../../assets/images/icons/visa.png";
 import mastercard from "../../assets/images/icons/mastercard.png";
 import express from "../../assets/images/icons/express.png";
 import discover from "../../assets/images/icons/discover.png";
+import FooterPayments from "./FooterPayments";
 
 const socialLinks = [
     {icon: faFacebookF, url: "#"},
@@ -41,14 +42,13 @@ const helpLinks = [
     {title: "FAQs", url: "#"},
 ]
 
-const donatLinks = [
+const paymentLinks = [
     {icon: paypal, url: "#"},
     {icon: visa, url: "#"},
     {icon: mastercard, url: "#"},
     {icon: express, url: "#"},
     {icon: discover, url: "#"},
 ]
-
 
 const Footer = () => {
     return (
@@ -79,7 +79,8 @@ const Footer = () => {
                 </div>
             </Row>
 
-            <FooterCopyright donatLinks={donatLinks}/>
+            <FooterPayments links={paymentLinks}/>
+            <FooterCopyright/>
 
         </footer>
     )
