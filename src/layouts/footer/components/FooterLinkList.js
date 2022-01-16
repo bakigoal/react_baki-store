@@ -1,5 +1,6 @@
 import React from "react";
 import UuidGenerator from "../../../utils/UuidGenerator";
+import {NavLink} from "react-bootstrap";
 
 const FooterLinkList = ({title, links}) => {
 
@@ -12,9 +13,9 @@ const FooterLinkList = ({title, links}) => {
             <ul>
                 {links.map(link =>(
                     <li className="pb-2" key={UuidGenerator.uuid4()}>
-                        <a href={link.url} className="s-text7">
+                        <NavLink href={link.url} className="s-text7">
                             {link.title}
-                        </a>
+                        </NavLink>
                     </li>
                 ))}
             </ul>
