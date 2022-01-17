@@ -9,9 +9,6 @@ import UuidGenerator from "../../../utils/UuidGenerator";
 
 
 class HeaderCart extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     toggleCartView(event) {
         this.props.cart.toggleVisibility()
