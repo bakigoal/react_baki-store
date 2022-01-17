@@ -1,6 +1,6 @@
 import React from "react";
 import './Footer.scss'
-import {Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import FooterSocials from "./components/FooterSocials";
 import FooterEmail from "./components/FooterEmail";
 import FooterCopyright from "./components/FooterCopyright";
@@ -54,29 +54,29 @@ const Footer = () => {
     return (
         <footer className="p-lg-5 p-3 pt-5 border-top footer bg-light">
             <Row className="pb-5">
-                <div className="col-lg-4 pt-3">
+                <Col lg={4}>
                     <FooterSocials links={socialLinks}/>
-                </div>
+                </Col>
 
-                <div className="col-lg-5">
+                <Col lg={5}>
                     <Row>
-                        <div className="col-4 pt-3">
+                        <Col>
                             <FooterLinkList title="Categories" links={categories}/>
-                        </div>
+                        </Col>
 
-                        <div className="col-4 pt-3">
+                        <Col>
                             <FooterLinkList title="Links" links={links}/>
-                        </div>
+                        </Col>
 
-                        <div className="col-4 pt-3">
+                        <Col>
                             <FooterLinkList title="Links" links={helpLinks}/>
-                        </div>
+                        </Col>
                     </Row>
-                </div>
+                </Col>
 
-                <div className="col-lg-3 pt-3">
+                <Col lg={3}>
                     <FooterEmail/>
-                </div>
+                </Col>
             </Row>
 
             <FooterPayments links={paymentLinks}/>
