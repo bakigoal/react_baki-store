@@ -8,7 +8,7 @@ import ImageBlock from "./ImageBlock";
 import Container from "react-bootstrap/Container";
 
 const Banner = () => (
-    <Container className="pt-40 pb-5" fluid>
+    <Container className="banner pt-40 pb-5" fluid as="section">
         <Row>
             <Col sm={10} md={8} lg={4}>
                 <ImageBlock img={banner1} label="Dresses"/>
