@@ -9,7 +9,7 @@ import Container from "react-bootstrap/Container";
 import SignUpBannerBlock from "./SignUpBannerBlock";
 
 const Banner = () => (
-    <Container className="banner pt-40 pb-5" fluid as="section">
+    <Container className="banner pt-40 pb-5" as="section">
         <Row className="justify-content-center">
             <Col sm={10} md={8} lg={4}>
                 <ImageBlock img={banner1} label="Dresses"/>
