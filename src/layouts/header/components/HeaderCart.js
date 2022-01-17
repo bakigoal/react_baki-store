@@ -5,6 +5,7 @@ import React, {Component} from "react";
 import Button from "react-bootstrap/Button";
 import HeaderCartItem from "./HeaderCartItem";
 import formatCurrency from "../../../utils/CurrencyFormatter";
+import UuidGenerator from "../../../utils/UuidGenerator";
 
 
 class HeaderCart extends Component {
@@ -48,7 +49,8 @@ class HeaderCart extends Component {
 
                 <div className={cartClass} onClick={e => this.onCartClick(e)}>
                     <ul className="header-cart-wrapitem ps-0">
-                        {this.props.cartItems.map(cartItem => (<HeaderCartItem cartItem={cartItem}/>))}
+                        {this.props.cartItems.map(cartItem => (
+                            <HeaderCartItem cartItem={cartItem} key={UuidGenerator.uuid4()}/>))}
                     </ul>
 
                     <div className="header-cart-total pt-2 pb-4 pr-1">
