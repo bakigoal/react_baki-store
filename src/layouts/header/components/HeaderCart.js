@@ -1,7 +1,4 @@
 import iconHeader2 from "../../../assets/images/icons/icon-header-02.png";
-import itemCart1 from "../../../assets/images/item-cart-01.jpg";
-import itemCart2 from "../../../assets/images/item-cart-02.jpg";
-import itemCart3 from "../../../assets/images/item-cart-03.jpg";
 import './HeaderCart.scss'
 
 import React, {Component} from "react";
@@ -9,26 +6,6 @@ import Button from "react-bootstrap/Button";
 import HeaderCartItem from "./HeaderCartItem";
 import formatCurrency from "../../../utils/CurrencyFormatter";
 
-const cartItems = [
-    {
-        img: itemCart1,
-        title: 'White Shirt With Pleat Detail Back',
-        count: 1,
-        price: 19.00
-    },
-    {
-        img: itemCart2,
-        title: 'Converse All Star Hi Black Canvas',
-        count: 1,
-        price: 39.00
-    },
-    {
-        img: itemCart3,
-        title: 'Nixon Porter Leather Watch In Tan',
-        count: 1,
-        price: 17.00
-    }
-]
 
 class HeaderCart extends Component {
     constructor(props) {
@@ -57,7 +34,7 @@ class HeaderCart extends Component {
     }
 
     calcTotalPrice() {
-        return cartItems.map(item => item.price * item.count).reduce((x, y) => x + y, 0)
+        return this.props.cartItems.map(item => item.price * item.count).reduce((x, y) => x + y, 0)
     }
 
     render() {
@@ -71,7 +48,7 @@ class HeaderCart extends Component {
 
                 <div className={cartClass} onClick={e => this.onCartClick(e)}>
                     <ul className="header-cart-wrapitem ps-0">
-                        {cartItems.map(cartItem => (<HeaderCartItem cartItem={cartItem}/>))}
+                        {this.props.cartItems.map(cartItem => (<HeaderCartItem cartItem={cartItem}/>))}
                     </ul>
 
                     <div className="header-cart-total pt-2 pb-4 pr-1">
