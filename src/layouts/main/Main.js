@@ -7,9 +7,10 @@ import Shop from "../../pages/Shop";
 import Sale from "../../pages/Sale";
 import Features from "../../pages/Features";
 import Blog from "../../pages/Blog";
+import './Main.scss'
 
 const Main = () => (
-    <main>
+    <main className="main-content">
         <Routes>
             <Route path="shop" element={page("Shop", <Shop/>)}/>
             <Route path="sale" element={page("Sale", <Sale/>)}/>

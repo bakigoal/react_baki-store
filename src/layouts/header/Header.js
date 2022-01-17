@@ -21,9 +21,11 @@ const Header = ({cartItems}) => {
 
     return (
         <header className="header">
-            <Navbar collapseOnSelect bg="white" variant="light" expand="lg" sticky="top"
-                    className="border-bottom shadow-sm mb-3">
-                <Container fluid className="ps-5 pe-5 header-desktop">
+
+            {/* Desktop Header */}
+            <Navbar collapseOnSelect bg="white" variant="light" expand="lg" fixed="top"
+                    className="border-bottom shadow-sm mb-3 header-desktop">
+                <Container fluid className="ps-5 pe-5">
                     <HeaderBrand/>
                     <Navbar.Toggle aria-controls="navbarScroll" className="header-toggle"/>
                     <Navbar.Collapse id="navbarScroll" className="header-collapse flex-grow-0">
@@ -31,8 +33,12 @@ const Header = ({cartItems}) => {
                     </Navbar.Collapse>
                     <HeaderIcons cart={cart}/>
                 </Container>
+            </Navbar>
 
-                <Container fluid className="header-mobile">
+            {/* Mobile Header */}
+            <Navbar collapseOnSelect bg="white" variant="light" expand="lg" sticky="top"
+                    className="border-bottom shadow-sm mb-3 header-mobile">
+                <Container fluid>
                     <HeaderBrand/>
                     <div className="d-flex justify-content-center align-items-center">
                         <HeaderIcons cart={cart}/>
@@ -43,6 +49,7 @@ const Header = ({cartItems}) => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
         </header>
     )
 }
