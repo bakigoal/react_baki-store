@@ -1,20 +1,15 @@
-import iconHeader1 from "../../../assets/images/icons/icon-header-01.png";
-import iconHeader2 from "../../../assets/images/icons/icon-header-02.png";
 import React from "react";
+import HeaderCart from "./HeaderCart";
+import HeaderUser from "./HeaderUser";
 
-const HeaderIcons = () => (
-    <div className="header-icons d-flex">
-        <a href="#" className="header-wrap-icon dis-block">
-            <img src={iconHeader1} className="header-icon1" alt="ICON"/>
-        </a>
-
-        <span className="line-divider1"/>
-
-        <div className="header-wrap-icon">
-            <img src={iconHeader2} className="header-icon1" alt="ICON"/>
-            <span className="icons-badge">3</span>
+const HeaderIcons = () => {
+    return (
+        <div className="header-icons d-flex">
+            <HeaderUser/>
+            <span className="line-divider1"/>
+            <HeaderCart/>
         </div>
-    </div>
-)
+    );
+}
 
 export default HeaderIcons

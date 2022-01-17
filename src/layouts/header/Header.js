@@ -10,13 +10,13 @@ const Header = () => {
     return (
         <header className="header">
             <Navbar collapseOnSelect bg="white" variant="light" expand="lg" sticky="top" className="border-bottom shadow-sm mb-3">
-                <Container fluid>
+                <Container fluid className="ps-5 pe-5">
                     <HeaderBrand/>
-                    <HeaderIcons />
                     <Navbar.Toggle aria-controls="navbarScroll" className="header-toggle"/>
                     <Navbar.Collapse id="navbarScroll" className="header-collapse">
                         <HeaderNavigation/>
                     </Navbar.Collapse>
+                    <HeaderIcons/>
                 </Container>
             </Navbar>
         </header>
