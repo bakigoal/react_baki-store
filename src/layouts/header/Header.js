@@ -6,7 +6,7 @@ import HeaderBrand from "./components/HeaderBrand";
 import HeaderNavigation from "./components/HeaderNavigation";
 import HeaderIcons from "./components/HeaderIcons";
 
-const Header = (props) => {
+const Header = ({cartItems}) => {
     const [visibleCart, changeCartVisibility] = useState(false)
 
     window.onclick = () => {
@@ -14,7 +14,7 @@ const Header = (props) => {
     }
 
     const cart = {
-        items: props.cartItems,
+        items: cartItems,
         visible: visibleCart,
         toggleVisibility: () => changeCartVisibility(!visibleCart)
     }
