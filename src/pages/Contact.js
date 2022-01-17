@@ -2,7 +2,7 @@ import React from "react";
 import User from "../model/User";
 import Container from "react-bootstrap/Container";
 
-const Users = () => {
+const Contact = () => {
     return (
         <Container>
             <ul>
@@ -28,4 +28,4 @@ function users() {
     });
 }
 
-export default Users
+export default Contact

@@ -1,4 +1,4 @@
-import {Nav, NavDropdown} from "react-bootstrap";
+import {Nav} from "react-bootstrap";
 import {useLocation} from "react-router-dom";
 import React from "react";
 
@@ -7,17 +7,12 @@ const HeaderNavigation = () => (
         activeKey={useLocation().pathname}
         className="me-auto">
         <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="/shop">Shop</Nav.Link>
+        <Nav.Link href="/sale">Sale</Nav.Link>
+        <Nav.Link href="/features">Features</Nav.Link>
+        <Nav.Link href="/blog">Blog</Nav.Link>
         <Nav.Link href="/about">About</Nav.Link>
-        <Nav.Link href="/users">Users</Nav.Link>
-        <NavDropdown title="Link" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/about">About</NavDropdown.Item>
-            <NavDropdown.Item href="/users">Users</NavDropdown.Item>
-            <NavDropdown.Divider/>
-            <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
-        </NavDropdown>
-        <Nav.Link href="#" disabled>
-            Link
-        </Nav.Link>
+        <Nav.Link href="/contact">Contact</Nav.Link>
     </Nav>
 )
 

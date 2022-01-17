@@ -1,15 +1,23 @@
 import {Route, Routes} from "react-router-dom";
 import Home from "../../pages/Home";
-import Users from "../../pages/Users";
+import Contact from "../../pages/Contact";
 import About from "../../pages/About";
 import React, {useEffect} from "react";
+import Shop from "../../pages/Shop";
+import Sale from "../../pages/Sale";
+import Features from "../../pages/Features";
+import Blog from "../../pages/Blog";
 
 const Main = () => (
     <main>
         <Routes>
-            <Route path="/" element={page("Home", <Home/>)}/>
-            <Route path="users" element={page("Users", <Users/>)}/>
+            <Route path="shop" element={page("Shop", <Shop/>)}/>
+            <Route path="sale" element={page("Sale", <Sale/>)}/>
+            <Route path="features" element={page("Features", <Features/>)}/>
+            <Route path="blog" element={page("Blog", <Blog/>)}/>
+            <Route path="contact" element={page("Contact", <Contact/>)}/>
             <Route path="about" element={page("About", <About/>)}/>
+            <Route path="/" element={page("Home", <Home/>)}/>
         </Routes>
     </main>
 );
