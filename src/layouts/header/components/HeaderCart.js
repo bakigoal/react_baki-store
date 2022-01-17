@@ -33,7 +33,7 @@ class HeaderCart extends Component {
         return (
             <div className="header-wrap-icon" onClick={e => this.toggleCartView(e)}>
                 <img src={iconHeader2} className="header-icon1" alt="ICON"/>
-                <span className="icons-badge">3</span>
+                <span className="icons-badge">{this.props.cart.items.length}</span>
 
                 <div className={cartClass} onClick={e => this.onCartClick(e)}>
                     <ul className="header-cart-wrapitem ps-0">
