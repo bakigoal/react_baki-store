@@ -24,7 +24,7 @@ const Header = ({cartItems}) => {
 
             {/* Desktop Header */}
             <Navbar collapseOnSelect bg="white" variant="light" expand="lg" fixed="top"
-                    className="border-bottom shadow-sm mb-3 header-desktop">
+                    className="border-bottom shadow-sm header-desktop">
                 <Container fluid className="ps-5 pe-5">
                     <HeaderBrand/>
                     <Navbar.Toggle aria-controls="navbarScroll" className="header-toggle"/>
@@ -37,7 +37,7 @@ const Header = ({cartItems}) => {
 
             {/* Mobile Header */}
             <Navbar collapseOnSelect bg="white" variant="light" expand="lg" sticky="top"
-                    className="border-bottom shadow-sm mb-3 header-mobile">
+                    className="border-bottom shadow-sm header-mobile">
                 <Container fluid>
                     <HeaderBrand/>
                     <div className="d-flex justify-content-center align-items-center">

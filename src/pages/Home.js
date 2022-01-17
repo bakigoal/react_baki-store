@@ -1,155 +1,34 @@
-import React, {useState} from 'react';
-import Alert from 'react-bootstrap/Alert';
-import InfoButton from "../components/InfoButton";
-import Container from "react-bootstrap/Container";
+import React from 'react';
+
+import slide1 from '../assets/images/master-slide-01.jpg'
+import slide2 from '../assets/images/master-slide-02.jpg'
+import slide3 from '../assets/images/master-slide-03.jpg'
+import MainCarousel from "../components/MainCarousel";
+
+const slides = [
+    {
+        img: slide1,
+        label: "First slide label",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        img: slide2,
+        label: "Second slide label",
+        description: "Nulla vitae elit libero, a pharetra augue mollis interdum."
+    },
+    {
+        img: slide3,
+        label: "Third slide label",
+        description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+    },
+]
 
 const Home = () => {
     return (
-        <Container className="mb-4">
-            <h1>Welcome To React-Bootstrap</h1>
-            <h2>Using Sass with custom theming</h2>
-            <AlertDismissibleExample/>
-            <hr/>
-            <p>
-                You can check further in information on the official Bootstrap docs{' '}
-                <a
-                    href="https://getbootstrap.com/docs/4.3/getting-started/theming/#importing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    here
-                </a>
-                .
-            </p>
-        </Container>
+        <>
+            <MainCarousel slides={slides} />
+        </>
     );
-};
-
-const AlertDismissibleExample = () => {
-    const [show, setShow] = useState(false);
-
-    if (show) {
-        return (
-            <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-                <Alert.Heading>
-                    I am an alert of type <span className="dangerText">danger</span>! But
-                    my color is Teal!
-                </Alert.Heading>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-                <p>
-                    By the way the button you just clicked is an{' '}
-                    <span className="infoText">Info</span> button but is using the color
-                    Tomato. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusantium debitis deleniti distinctio impedit officia reprehenderit
-                    suscipit voluptatibus. Earum, nam necessitatibus!
-                </p>
-            </Alert>
-        );
-    }
-    return (
-        <div>
-            <InfoButton onClick={() => setShow(true)}>
-                Show Custom Styled Alert
-            </InfoButton>
-        </div>
-    );
-};
+}
 
 export default Home;
