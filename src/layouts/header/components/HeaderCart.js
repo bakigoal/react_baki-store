@@ -11,22 +11,10 @@ import UuidGenerator from "../../../utils/UuidGenerator";
 class HeaderCart extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            cartVisible: false
-        }
-        window.onclick = () => {
-            if (this.state.cartVisible) {
-                this.setState({
-                    cartVisible: false
-                })
-            }
-        }
     }
 
     toggleCartView(event) {
-        this.setState({
-            cartVisible: !this.state.cartVisible
-        })
+        this.props.cart.toggleVisibility()
         event.stopPropagation()
     }
 
@@ -35,12 +23,12 @@ class HeaderCart extends Component {
     }
 
     calcTotalPrice() {
-        return this.props.cartItems.map(item => item.price * item.count).reduce((x, y) => x + y, 0)
+        return this.props.cart.items.map(item => item.price * item.count).reduce((x, y) => x + y, 0)
     }
 
     render() {
         let cartClass = "header-cart header-dropdown"
-        if (this.state.cartVisible) cartClass += " show-header-dropdown"
+        if (this.props.cart.visible===true) cartClass += " show-header-dropdown"
 
         return (
             <div className="header-wrap-icon" onClick={e => this.toggleCartView(e)}>
@@ -49,7 +37,7 @@ class HeaderCart extends Component {
 
                 <div className={cartClass} onClick={e => this.onCartClick(e)}>
                     <ul className="header-cart-wrapitem ps-0">
-                        {this.props.cartItems.map(cartItem => (
+                        {this.props.cart.items.map(cartItem => (
                             <HeaderCartItem cartItem={cartItem} key={UuidGenerator.uuid4()}/>))}
                     </ul>
 
