@@ -23,7 +23,7 @@ const MainCarousel = ({slides}) => (
                         {slide.description}
                     </span>
 
-                    <div className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center pt-3 pb-3">
                         <LightButton text="Shop Now" type="submit"/>
                     </div>
                 </Carousel.Caption>
