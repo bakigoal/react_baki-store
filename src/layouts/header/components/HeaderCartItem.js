@@ -1,10 +1,11 @@
 import React from "react";
 import formatCurrency from "../../../utils/CurrencyFormatter";
+import {Image} from "react-bootstrap";
 
 const HeaderCartItem = ({cartItem}) => (
     <li className="d-flex pb-1 pt-1">
         <div className="header-cart-item-img">
-            <img src={cartItem.img} alt="IMG"/>
+            <Image src={cartItem.img} alt="IMG" rounded/>
         </div>
 
         <div className="header-cart-item-txt">

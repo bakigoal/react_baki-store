@@ -6,6 +6,7 @@ import HeaderCartItem from "./HeaderCartItem";
 import formatCurrency from "../../../utils/CurrencyFormatter";
 import UuidGenerator from "../../../utils/UuidGenerator";
 import DarkButton from "../../../components/DarkButton";
+import {Image} from "react-bootstrap";
 
 
 const HeaderCart = ({cart}) => {
@@ -24,7 +25,7 @@ const HeaderCart = ({cart}) => {
     if (cart.visible) cartClass += " show-header-dropdown"
     return (
         <div className="header-wrap-icon" onClick={e => toggleCartView(e)}>
-            <img src={iconHeader2} className="header-icon1" alt="ICON"/>
+            <Image src={iconHeader2} className="header-icon1" alt="ICON"/>
             <span className="icons-badge">{cart.items.length}</span>
 
             <div className={cartClass} onClick={e => onCartClick(e)}>

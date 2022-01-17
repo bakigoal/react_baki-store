@@ -1,5 +1,5 @@
 import React from "react";
-import {Carousel} from "react-bootstrap";
+import {Carousel, Image} from "react-bootstrap";
 import UuidGenerator from "../utils/UuidGenerator";
 import './MainCarousel.scss'
 import {Wave} from "react-animated-text";
@@ -9,7 +9,7 @@ const MainCarousel = ({slides}) => (
     <Carousel variant="dark" className="carousel pt-lg-4 pt-0" fade as="section">
         {slides.map(slide => (
             <Carousel.Item key={UuidGenerator.uuid4()} as="div" className="carousel-image-container">
-                <img
+                <Image
                     className="carousel-image"
                     src={slide.img}
                     alt={slide.label}
