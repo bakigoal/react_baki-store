@@ -1,7 +1,7 @@
 import React from "react";
 import {Carousel} from "react-bootstrap";
 import UuidGenerator from "../utils/UuidGenerator";
-import './Carousel.scss'
+import './MainCarousel.scss'
 
 const MainCarousel = ({slides}) => (
     <Carousel variant="dark" className="carousel pt-lg-4 pt-0">
