@@ -1,13 +1,16 @@
-import Button from "react-bootstrap/Button";
 import './ImageBlock.scss'
+import {Card} from "react-bootstrap";
+import LightButton from "./LightButton";
 
 const ImageBlock = ({img, label}) => (
-    <div className="block1 hov-img-zoom position-relative mb-3">
-        <img src={img} alt={label}/>
-        <div className="block1-wrap-btn button-container-size">
-            <Button variant="light" className="w-100">{label}</Button>
-        </div>
-    </div>
+    <Card className="text-white mb-3 hov-img-zoom">
+        <Card.Img src={img} alt={label}/>
+        <Card.ImgOverlay>
+            <div className="h-100 d-flex flex-column-reverse align-items-center">
+                <LightButton text={label} type="submit"/>
+            </div>
+        </Card.ImgOverlay>
+    </Card>
 )
 
 export default ImageBlock

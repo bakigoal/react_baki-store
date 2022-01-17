@@ -2,7 +2,6 @@ import iconHeader2 from "../../../assets/images/icons/icon-header-02.png";
 import './HeaderCart.scss'
 
 import React from "react";
-import Button from "react-bootstrap/Button";
 import HeaderCartItem from "./HeaderCartItem";
 import formatCurrency from "../../../utils/CurrencyFormatter";
 import UuidGenerator from "../../../utils/UuidGenerator";

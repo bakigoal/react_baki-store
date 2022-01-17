@@ -2,8 +2,8 @@ import React from "react";
 import {Carousel} from "react-bootstrap";
 import UuidGenerator from "../utils/UuidGenerator";
 import './MainCarousel.scss'
-import Button from "react-bootstrap/Button";
 import {Wave} from "react-animated-text";
+import LightButton from "./LightButton";
 
 const MainCarousel = ({slides}) => (
     <Carousel variant="dark" className="carousel pt-lg-4 pt-0" fade as="section">
@@ -23,8 +23,8 @@ const MainCarousel = ({slides}) => (
                         {slide.description}
                     </span>
 
-                    <div className="pt-2 pb-3 button-container-size me-auto ms-auto">
-                        <Button variant="light" className="w-100">Shop Now</Button>
+                    <div className="d-flex justify-content-center">
+                        <LightButton text="Shop Now" type="submit"/>
                     </div>
                 </Carousel.Caption>
             </Carousel.Item>
