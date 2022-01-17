@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import HeaderCartItem from "./HeaderCartItem";
 import formatCurrency from "../../../utils/CurrencyFormatter";
 import UuidGenerator from "../../../utils/UuidGenerator";
+import DarkButton from "../../../components/DarkButton";
 
 
 const HeaderCart = ({cart}) => {
@@ -37,8 +38,8 @@ const HeaderCart = ({cart}) => {
                 </div>
 
                 <div className="d-flex gap-3">
-                    <Button variant="dark" type="submit" className="text-uppercase w-100">View Cart</Button>
-                    <Button variant="dark" type="submit" className="text-uppercase w-100">Check Out</Button>
+                    <DarkButton text="View Cart" type="submit"/>
+                    <DarkButton text="Check Out" type="submit"/>
                 </div>
             </div>
         </div>

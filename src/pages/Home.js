@@ -4,6 +4,7 @@ import slide1 from '../assets/images/master-slide-01.jpg'
 import slide2 from '../assets/images/master-slide-02.jpg'
 import slide3 from '../assets/images/master-slide-03.jpg'
 import MainCarousel from "../components/MainCarousel";
+import Banner from "../components/Banner";
 
 const slides = [
     {
@@ -26,7 +27,8 @@ const slides = [
 const Home = () => {
     return (
         <>
-            <MainCarousel slides={slides} />
+            <MainCarousel slides={slides}/>
+            <Banner/>
         </>
     );
 }

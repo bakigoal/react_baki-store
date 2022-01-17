@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import {Wave} from "react-animated-text";
 
 const MainCarousel = ({slides}) => (
-    <Carousel variant="dark" className="carousel pt-lg-4 pt-0" fade>
+    <Carousel variant="dark" className="carousel pt-lg-4 pt-0" fade as="section">
         {slides.map(slide => (
             <Carousel.Item key={UuidGenerator.uuid4()} as="div" className="carousel-image-container">
                 <img
@@ -23,8 +23,8 @@ const MainCarousel = ({slides}) => (
                         {slide.description}
                     </span>
 
-                    <div className="pt-2 pb-3">
-                        <Button variant="light">Shop Now</Button>
+                    <div className="pt-2 pb-3 button-container-size me-auto ms-auto">
+                        <Button variant="light" className="w-100">Shop Now</Button>
                     </div>
                 </Carousel.Caption>
             </Carousel.Item>

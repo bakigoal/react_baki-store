@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import DarkButton from "../../../components/DarkButton";
 
 
 const FooterEmail = () => (
@@ -15,8 +16,8 @@ const FooterEmail = () => (
                 <span className="effect1-line"/>
             </div>
 
-            <div className="subscribe-button pt-3">
-                <Button variant="dark" type="submit" className="text-uppercase w-100">Subscribe</Button>
+            <div className="pt-3">
+                <DarkButton text="Subscribe" type="submit"/>
             </div>
 
         </form>
