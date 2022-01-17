@@ -6,7 +6,7 @@ import {Wave} from "react-animated-text";
 import LightButton from "./LightButton";
 
 const MainCarousel = ({slides}) => (
-    <Carousel variant="dark" className="carousel pt-lg-4 pt-0" fade as="section">
+    <Carousel variant="dark" className="carousel pt-0" fade as="section">
         {slides.map(slide => (
             <Carousel.Item key={UuidGenerator.uuid4()} as="div" className="carousel-image-container">
                 <Image
