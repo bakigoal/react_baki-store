@@ -38,13 +38,13 @@ const Header = ({cartItems}) => {
             {/* Mobile Header */}
             <Navbar collapseOnSelect bg="white" variant="light" expand="lg" sticky="top"
                     className="border-bottom shadow-sm header-mobile">
-                <Container fluid>
+                <Container fluid className="ps-0 pe-0">
                     <HeaderBrand/>
-                    <div className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex justify-content-center align-items-center pe-4">
                         <HeaderIcons cart={cart}/>
-                        <Navbar.Toggle aria-controls="navbarScroll" className="header-toggle ms-4"/>
+                        <Navbar.Toggle aria-controls="navbarScroll" className="header-toggle ms-5"/>
                     </div>
-                    <Navbar.Collapse id="navbarScroll" className="header-collapse border-top">
+                    <Navbar.Collapse id="navbarScroll" className="header-collapse border-top item-menu-mobile ps-4">
                         <HeaderNavigation/>
                     </Navbar.Collapse>
                 </Container>

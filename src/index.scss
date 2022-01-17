@@ -37,7 +37,14 @@ p {
 
   button {
     padding: 0;
-    height: 44px;
+    outline: none !important;
+    border: none;
+    height: 46px;
+  }
+
+  button:hover {
+    background-color: #e65540;
+    color: white;
   }
 }
 
@@ -57,6 +64,6 @@ p {
   max-width: 257px;
 }
 
-.border-radius-25 {
-  border-radius: 25px;
+.border-radius-23 {
+  border-radius: 23px;
 }
