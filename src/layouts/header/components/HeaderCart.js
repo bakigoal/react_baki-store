@@ -6,7 +6,7 @@ import HeaderCartItem from "./HeaderCartItem";
 import formatCurrency from "../../../utils/CurrencyFormatter";
 import UuidGenerator from "../../../utils/UuidGenerator";
 import DarkButton from "../../../components/DarkButton";
-import {Image} from "react-bootstrap";
+import {Badge, Image} from "react-bootstrap";
 
 
 const HeaderCart = ({cart}) => {
@@ -26,7 +26,9 @@ const HeaderCart = ({cart}) => {
     return (
         <div className="header-wrap-icon" onClick={e => toggleCartView(e)}>
             <Image src={iconHeader2} className="header-icon1" alt="ICON"/>
-            <span className="icons-badge">{cart.items.length}</span>
+            <span className="icons-badge">
+                <Badge bg="dark" pill={true}>{cart.items.length}</Badge>
+            </span>
 
             <div className={cartClass} onClick={e => onCartClick(e)}>
                 <ul className="header-cart-wrapitem ps-0">
