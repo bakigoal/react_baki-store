@@ -5,8 +5,14 @@
   }
 
   @media all and (min-width: 0px) and (max-width: 991px) {
-    .header-icons {
-      display: none !important;
+    .header-desktop {
+      display: none;
+    }
+  }
+
+  @media all and (min-width: 992px) {
+    .header-mobile {
+      display: none;
     }
   }
 
