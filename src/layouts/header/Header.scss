@@ -1,12 +1,12 @@
 .header {
 
-  nav {
-    min-height: 80px;
-  }
-
   @media all and (min-width: 0px) and (max-width: 991px) {
     .header-desktop {
       display: none;
+    }
+
+    .header-collapse {
+      margin-top: 20px;
     }
   }
 

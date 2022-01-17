@@ -25,7 +25,7 @@ const Header = () => {
                         <HeaderIcons/>
                         <Navbar.Toggle aria-controls="navbarScroll" className="header-toggle ms-4"/>
                     </div>
-                    <Navbar.Collapse id="navbarScroll" className="header-collapse">
+                    <Navbar.Collapse id="navbarScroll" className="header-collapse border-top">
                         <HeaderNavigation/>
                     </Navbar.Collapse>
                 </Container>
