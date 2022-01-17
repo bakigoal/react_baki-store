@@ -5,6 +5,30 @@ import itemCart3 from "../../../assets/images/item-cart-03.jpg";
 import './HeaderCart.scss'
 
 import React, {Component} from "react";
+import Button from "react-bootstrap/Button";
+import HeaderCartItem from "./HeaderCartItem";
+import formatCurrency from "../../../utils/CurrencyFormatter";
+
+const cartItems = [
+    {
+        img: itemCart1,
+        title: 'White Shirt With Pleat Detail Back',
+        count: 1,
+        price: 19.00
+    },
+    {
+        img: itemCart2,
+        title: 'Converse All Star Hi Black Canvas',
+        count: 1,
+        price: 39.00
+    },
+    {
+        img: itemCart3,
+        title: 'Nixon Porter Leather Watch In Tan',
+        count: 1,
+        price: 17.00
+    }
+]
 
 class HeaderCart extends Component {
     constructor(props) {
@@ -21,7 +45,7 @@ class HeaderCart extends Component {
         }
     }
 
-    toggleCartView(event){
+    toggleCartView(event) {
         this.setState({
             cartVisible: !this.state.cartVisible
         })
@@ -30,6 +54,10 @@ class HeaderCart extends Component {
 
     onCartClick(event) {
         event.stopPropagation()
+    }
+
+    calcTotalPrice() {
+        return cartItems.map(item => item.price * item.count).reduce((x, y) => x + y, 0)
     }
 
     render() {
@@ -42,72 +70,17 @@ class HeaderCart extends Component {
                 <span className="icons-badge">3</span>
 
                 <div className={cartClass} onClick={e => this.onCartClick(e)}>
-                    <ul className="header-cart-wrapitem">
-                        <li className="header-cart-item">
-                            <div className="header-cart-item-img">
-                                <img src={itemCart1} alt="IMG"/>
-                            </div>
-
-                            <div className="header-cart-item-txt">
-                                <a href="#" className="header-cart-item-name">
-                                    White Shirt With Pleat Detail Back
-                                </a>
-
-                                <span className="header-cart-item-info">
-                                                1 x $19.00
-                                            </span>
-                            </div>
-                        </li>
-
-                        <li className="header-cart-item">
-                            <div className="header-cart-item-img">
-                                <img src={itemCart2} alt="IMG"/>
-                            </div>
-
-                            <div className="header-cart-item-txt">
-                                <a href="#" className="header-cart-item-name">
-                                    Converse All Star Hi Black Canvas
-                                </a>
-
-                                <span className="header-cart-item-info">
-                                                1 x $39.00
-                                            </span>
-                            </div>
-                        </li>
-
-                        <li className="header-cart-item">
-                            <div className="header-cart-item-img">
-                                <img src={itemCart3} alt="IMG"/>
-                            </div>
-
-                            <div className="header-cart-item-txt">
-                                <a href="#" className="header-cart-item-name">
-                                    Nixon Porter Leather Watch In Tan
-                                </a>
-
-                                <span className="header-cart-item-info">
-                                                1 x $17.00
-                                            </span>
-                            </div>
-                        </li>
+                    <ul className="header-cart-wrapitem ps-0">
+                        {cartItems.map(cartItem => (<HeaderCartItem cartItem={cartItem}/>))}
                     </ul>
 
-                    <div className="header-cart-total">
-                        Total: $75.00
+                    <div className="header-cart-total pt-2 pb-4 pr-1">
+                        Total: {formatCurrency(this.calcTotalPrice())}
                     </div>
 
-                    <div className="header-cart-buttons">
-                        <div className="header-cart-wrapbtn">
-                            <a href="#" className="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                View Cart
-                            </a>
-                        </div>
-
-                        <div className="header-cart-wrapbtn">
-                            <a href="#" className="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                Check Out
-                            </a>
-                        </div>
+                    <div className="d-flex gap-3">
+                        <Button variant="dark" type="submit" className="text-uppercase w-100">View Cart</Button>
+                        <Button variant="dark" type="submit" className="text-uppercase w-100">Check Out</Button>
                     </div>
                 </div>
             </div>

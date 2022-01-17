@@ -1,5 +1,5 @@
-import Button from "react-bootstrap/Button";
 import React from "react";
+import Button from "react-bootstrap/Button";
 
 
 const FooterEmail = () => (
@@ -16,7 +16,7 @@ const FooterEmail = () => (
             </div>
 
             <div className="subscribe-button pt-3">
-                <Button variant="dark">Subscribe</Button>
+                <Button variant="dark" type="submit" className="text-uppercase w-100">Subscribe</Button>
             </div>
 
         </form>
