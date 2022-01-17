@@ -6,6 +6,7 @@ import banner4 from "../assets/images/banner-04.jpg";
 import {Col, Row} from "react-bootstrap";
 import ImageBlock from "./ImageBlock";
 import Container from "react-bootstrap/Container";
+import SignUpBannerBlock from "./SignUpBannerBlock";
 
 const Banner = () => (
     <Container className="banner pt-40 pb-5" fluid as="section">
@@ -20,7 +21,7 @@ const Banner = () => (
             </Col>
             <Col sm={10} md={8} lg={4}>
                 <ImageBlock img={banner4} label="Bags"/>
-                <ImageBlock img={banner3} label="Sunglasses"/>
+                <SignUpBannerBlock/>
             </Col>
         </Row>
     </Container>

@@ -1,36 +1,51 @@
-@import "custom";
-@import "text";
+@import "style/custom";
+@import "style/text";
+@import "style/image";
 
 body {
   font-family: 'Montserrat', sans-serif;
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-  .social-icon-link {
-    color: #888888;
-  }
+p {
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #888888;
+  margin: 0;
+}
 
-  .line-divider1{
-    display: block;
-    height: 20px;
-    width: 1px;
-    background-color: #e5e5e5;
-    margin-left: 23px;
-    margin-right: 23px;
-    margin-top: 5px;
-  }
+.social-icon-link {
+  color: #888888;
+}
 
-  .button-container-size {
-    width: 179px;
-  }
+.line-divider1 {
+  display: block;
+  height: 20px;
+  width: 1px;
+  background-color: #e5e5e5;
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-top: 5px;
+}
 
-  .pt-40 {
-    padding-top: 40px;
-  }
+.button-container-size {
+  width: 179px;
+}
 
-  .pb-40 {
-    padding-bottom: 40px;
-  }
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+.w-size3 {
+  max-width: 294px;
+}
+.w-size4 {
+  max-width: 257px;
 }

@@ -12,8 +12,8 @@ const FooterLinkList = ({title, links}) => {
 
             <ul>
                 {links.map(link =>(
-                    <li className="pb-2" key={UuidGenerator.uuid4()}>
-                        <NavLink href={link.url} className="s-text7">
+                    <li key={UuidGenerator.uuid4()}>
+                        <NavLink href={link.url} className="s-text7 ps-0 pt-0">
                             {link.title}
                         </NavLink>
                     </li>
