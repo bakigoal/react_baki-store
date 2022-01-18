@@ -14,12 +14,12 @@ import FeaturedProducts from "./sections/FeaturedProducts";
 import HomeBlogSection from "./sections/HomeBlogSection";
 import BlogService from "../../service/BlogService";
 
-const Home = () => {
+const Home = ({setCartItems}) => {
     return (
         <>
             <MainCarousel slides={slides}/>
             <Banner/>
-            <FeaturedProducts products={featuredProducts} />
+            <FeaturedProducts products={featuredProducts} setCartItems={setCartItems}/>
             <HomeBlogSection blogs={blogs}/>
         </>
     );
@@ -46,14 +46,14 @@ const slides = [
 ]
 
 const featuredProducts = [
-    new Product(feat1, "Boxy7 T-Shirt with Roll Sleeve", 20.0),
-    new Product(feat2, "Denim jacket blue", 92.5),
-    new Product(feat3, "Coach slim easton black", 165.9),
-    new Product(feat4, "Frayed denim shorts", 29.5),
-    new Product(feat1, "Herschel supply co 25l", 75.0),
-    new Product(feat2, "Denim jacket blue", 92.5),
-    new Product(feat3, "Coach slim easton black", 165.9),
-    new Product(feat4, "Frayed denim shorts", 29.5),
+    new Product(1, feat1, "Boxy7 T-Shirt with Roll Sleeve", 20.0),
+    new Product(2, feat2, "Denim jacket blue", 92.5),
+    new Product(3, feat3, "Coach slim easton black", 165.9),
+    new Product(4, feat4, "Frayed denim shorts", 29.5),
+    new Product(5, feat1, "Herschel supply co 25l", 75.0),
+    new Product(6, feat2, "Denim jacket blue", 92.5),
+    new Product(7, feat3, "Coach slim easton black", 165.9),
+    new Product(8, feat4, "Frayed denim shorts", 29.5),
 ]
 
 const blogs = new BlogService().getAllBlogs()

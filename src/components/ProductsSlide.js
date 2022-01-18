@@ -3,7 +3,7 @@ import './ProductsSlide.scss'
 import {Carousel, Col, Row} from "react-bootstrap";
 import ProductBlock from "./ProductBlock";
 
-const ProductsSlide = ({products, countPerSlide}) => {
+const ProductsSlide = ({products, countPerSlide, setCartItems}) => {
     let slideCount = Math.ceil(products.length / countPerSlide)
 
     const getProductsForSlide = slideNumber => {
@@ -19,7 +19,7 @@ const ProductsSlide = ({products, countPerSlide}) => {
                     <Row className="justify-content-center">
                         {getProductsForSlide(slideNumber).map(product => (
                             <Col sm={6} md={6} lg={3} key={product.id}>
-                                <ProductBlock product={product}/>
+                                <ProductBlock product={product} setCartItems={setCartItems}/>
                             </Col>
                         ))}
                     </Row>

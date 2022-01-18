@@ -9,7 +9,7 @@ import Features from "../../pages/Features";
 import Blog from "../../pages/Blog";
 import './Main.scss'
 
-const Main = () => (
+const Main = ({setCartItems}) => (
     <main className="main-content">
         <Routes>
             <Route path="shop" element={page("Shop", <Shop/>)}/>
@@ -18,7 +18,7 @@ const Main = () => (
             <Route path="blog" element={page("Blog", <Blog/>)}/>
             <Route path="contact" element={page("Contact", <Contact/>)}/>
             <Route path="about" element={page("About", <About/>)}/>
-            <Route path="/" element={page("Home", <Home/>)}/>
+            <Route path="/" element={page("Home", <Home setCartItems={setCartItems}/>)}/>
         </Routes>
     </main>
 );
