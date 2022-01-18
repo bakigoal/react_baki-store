@@ -1,41 +1,33 @@
 import React from "react";
-import {faAngleLeft, faAngleRight} from "@fortawesome/free-solid-svg-icons";
-import FaIconButton from "./FaIconButton";
-import {Col, Row} from "react-bootstrap";
+import './ProductsSlide.scss'
+import {Carousel, Col, Row} from "react-bootstrap";
 import ProductBlock from "./ProductBlock";
 
-const ProductsSlide = ({products, countPerPage}) => {
-    const slidedProducts = products.slice(0, countPerPage)
+const ProductsSlide = ({products, countPerSlide}) => {
+    let slideCount = Math.ceil(products.length / countPerSlide)
+
+    const getProductsForSlide = slideNumber => {
+        let start = slideNumber * countPerSlide;
+        let end = (slideNumber + 1) * countPerSlide;
+        return products.slice(start, end)
+    };
 
     return (
-        <div className="d-flex products-slide align-items-center">
-            <div className="flex-grow-0 pe-1">
-                <FaIconButton icon={faAngleLeft} onclick={onLeftClick} size="2x"/>
-            </div>
+        <Carousel variant="dark" className="products-slide carousel pt-0" indicators={false} interval={10000}>
+            {[...Array(slideCount).keys()].map(slideNumber => (
+                <Carousel.Item as="div" className="carousel-image-container h-100" key={slideNumber}>
+                    <Row className="justify-content-center">
+                        {getProductsForSlide(slideNumber).map(product => (
+                            <Col sm={6} md={6} lg={3} key={product.id}>
+                                <ProductBlock product={product}/>
+                            </Col>
+                        ))}
+                    </Row>
+                </Carousel.Item>
+            ))}
 
-            <div className="flex-grow-1">
-                <Row className="justify-content-center">
-                    {slidedProducts.map(product => (
-                        <Col sm={6} md={6} lg={3} key={product.id}>
-                            <ProductBlock product={product}/>
-                        </Col>
-                    ))}
-                </Row>
-            </div>
-
-            <div className="flex-grow-0 ps-1">
-                <FaIconButton icon={faAngleRight} onclick={onRightClick} size="2x"/>
-            </div>
-        </div>
+        </Carousel>
     );
-}
-
-const onLeftClick = () => {
-    console.log("left clicked...")
-}
-
-const onRightClick = () => {
-    console.log("right clicked...")
 }
 
 export default ProductsSlide

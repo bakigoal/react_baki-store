@@ -1,0 +1,16 @@
+.products-slide {
+
+  a.carousel-control-prev {
+    width: 40px;
+    height: 40px;
+    left: -40px;
+    top: calc((100% - 70px)/ 2);
+  }
+
+  a.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    right: -40px;
+    top: calc((100% - 70px)/ 2);
+  }
+}

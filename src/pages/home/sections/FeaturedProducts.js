@@ -5,15 +5,15 @@ import './FeaturedProducts.scss'
 
 const FeaturedProducts = ({products}) => (
     <Container className="featured-products pb-5" as="section">
-        <SectionTitle title="Featured Products" />
+        <SectionTitle title="Featured Products"/>
         <div className="featured-products-mobile">
-            <ProductsSlide products={products} countPerPage={1}/>
+            <ProductsSlide products={products} countPerSlide={1}/>
         </div>
         <div className="featured-products-pad">
-            <ProductsSlide products={products} countPerPage={2}/>
+            <ProductsSlide products={products} countPerSlide={2}/>
         </div>
         <div className="featured-products-desktop">
-            <ProductsSlide products={products} countPerPage={4}/>
+            <ProductsSlide products={products} countPerSlide={4}/>
         </div>
     </Container>
 )
