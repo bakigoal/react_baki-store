@@ -51,6 +51,25 @@
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
+.hov-img-zoom-img {
+  display: block;
+  overflow: hidden;
+}
+.hov-img-zoom-img img{
+  width: 100%;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.hov-img-zoom-img img:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
 .hov-pointer {
   cursor: pointer !important;

@@ -8,9 +8,9 @@ import {Link} from "react-router-dom";
 const ProductBlock = ({product}) => (
     <Card border="white">
         <Card.Img variant="top" src={product.image} alt={product.name}/>
-        <Card.Body>
-            <Card.Title><Link to="about">{product.name}</Link></Card.Title>
-            <Card.Text className="pt-3">
+        <Card.Body className="ps-0 pe-0">
+            <Card.Title className="s-text3"><Link to="about">{product.name}</Link></Card.Title>
+            <Card.Text className="pt-2 m-text6">
                     {formatCurrency(product.price)} {"  "}
                     <FaIconButton icon={faCartPlus} onclick={() => addToCart(product)}/>
             </Card.Text>

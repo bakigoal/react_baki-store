@@ -11,6 +11,8 @@ import MainCarousel from "./sections/MainCarousel";
 import Banner from "./sections/Banner";
 import Product from "../../model/Product";
 import FeaturedProducts from "./sections/FeaturedProducts";
+import HomeBlogSection from "./sections/HomeBlogSection";
+import BlogService from "../../service/BlogService";
 
 const Home = () => {
     return (
@@ -18,6 +20,7 @@ const Home = () => {
             <MainCarousel slides={slides}/>
             <Banner/>
             <FeaturedProducts products={featuredProducts} />
+            <HomeBlogSection blogs={blogs}/>
         </>
     );
 }
@@ -52,3 +55,5 @@ const featuredProducts = [
     new Product(feat3, "Coach slim easton black", 165.9),
     new Product(feat4, "Frayed denim shorts", 29.5),
 ]
+
+const blogs = new BlogService().getAllBlogs()
