@@ -3,12 +3,13 @@ import formatCurrency from "../utils/CurrencyFormatter";
 import FaIconButton from "./FaIconButton";
 import {faCartPlus} from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import {Link} from "react-router-dom";
 
 const ProductBlock = ({product}) => (
     <Card border="white">
         <Card.Img variant="top" src={product.image} alt={product.name}/>
         <Card.Body>
-            <Card.Title>{product.name}</Card.Title>
+            <Card.Title><Link to="about">{product.name}</Link></Card.Title>
             <Card.Text className="pt-3">
                     {formatCurrency(product.price)} {"  "}
                     <FaIconButton icon={faCartPlus} onclick={() => addToCart(product)}/>
