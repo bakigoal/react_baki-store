@@ -1,5 +1,36 @@
-.featured-products{
+.featured-products {
 
+  @media all and (min-width: 0) and (max-width: 575px) {
+    .featured-products-mobile {
+    }
+    .featured-products-pad {
+      display: none!important;
+    }
+    .featured-products-desktop {
+      display: none!important;
+    }
+  }
 
+  @media all and (min-width: 576px) and (max-width: 991px) {
+    .featured-products-mobile {
+      display: none!important;
+    }
+    .featured-products-pad {
+    }
+    .featured-products-desktop {
+      display: none!important;
+    }
+  }
 
+  @media all and (min-width: 992px) {
+
+    .featured-products-mobile {
+      display: none!important;
+    }
+    .featured-products-pad {
+      display: none!important;
+    }
+    .featured-products-desktop {
+    }
+  }
 }
