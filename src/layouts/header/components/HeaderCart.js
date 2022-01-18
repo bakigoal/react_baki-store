@@ -7,6 +7,7 @@ import formatCurrency from "../../../utils/CurrencyFormatter";
 import UuidGenerator from "../../../utils/UuidGenerator";
 import DarkButton from "../../../components/DarkButton";
 import {Badge, Image} from "react-bootstrap";
+import {useNavigate} from "react-router-dom";
 
 
 const HeaderCart = ({cart}) => {
@@ -20,6 +21,11 @@ const HeaderCart = ({cart}) => {
     }
 
     const calcTotalPrice = () => cart.items.map(item => item.price * item.count).reduce((x, y) => x + y, 0);
+
+    const navigate = useNavigate()
+    const navigateToCartPage = () => {
+        navigate("cart", {replace: true})
+    }
 
     let cartClass = "header-cart header-dropdown"
     if (cart.visible) cartClass += " show-header-dropdown"
@@ -40,8 +46,8 @@ const HeaderCart = ({cart}) => {
                 </div>
 
                 <div className="d-flex gap-3">
-                    <DarkButton text="View Cart" type="submit"/>
-                    <DarkButton text="Check Out" type="submit"/>
+                    <DarkButton text="View Cart" type="submit" onClick={() => navigateToCartPage()}/>
+                    <DarkButton text="Check Out" type="submit" onClick={() => navigateToCartPage()}/>
                 </div>
             </div>
         </div>

@@ -8,6 +8,7 @@ import Sale from "../../pages/Sale";
 import Features from "../../pages/Features";
 import Blog from "../../pages/Blog";
 import './Main.scss'
+import Cart from "../../pages/Cart";
 
 const Main = ({setCartItems}) => (
     <main className="main-content">
@@ -18,6 +19,7 @@ const Main = ({setCartItems}) => (
             <Route path="blog" element={page("Blog", <Blog/>)}/>
             <Route path="contact" element={page("Contact", <Contact/>)}/>
             <Route path="about" element={page("About", <About/>)}/>
+            <Route path="cart" element={page("Shopping Cart", <Cart/>)}/>
             <Route path="/" element={page("Home", <Home setCartItems={setCartItems}/>)}/>
         </Routes>
     </main>
