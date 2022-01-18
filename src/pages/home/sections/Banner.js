@@ -1,11 +1,11 @@
-import banner1 from "../assets/images/banner-01.jpg";
-import banner2 from "../assets/images/banner-02.jpg";
-import banner3 from "../assets/images/banner-03.jpg";
-import banner4 from "../assets/images/banner-04.jpg";
-import banner5 from "../assets/images/banner-05.jpg";
-import banner9 from "../assets/images/banner-09.jpg";
+import banner1 from "../../../assets/images/banner-01.jpg";
+import banner2 from "../../../assets/images/banner-02.jpg";
+import banner3 from "../../../assets/images/banner-03.jpg";
+import banner4 from "../../../assets/images/banner-04.jpg";
+import banner5 from "../../../assets/images/banner-05.jpg";
+import banner9 from "../../../assets/images/banner-09.jpg";
 import {Col, Row} from "react-bootstrap";
-import ImageBlock from "./ImageBlock";
+import ImageBlock from "../../../components/ImageBlock";
 import Container from "react-bootstrap/Container";
 
 const Banner = () => (
