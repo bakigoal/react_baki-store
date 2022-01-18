@@ -8,6 +8,15 @@ body {
 
 a {
   text-decoration: none;
+  -webkit-transition: all .4s !important;
+}
+
+a.active {
+  color: #e65540 !important;
+}
+
+a:hover {
+  color: #e65540 !important;
 }
 
 p {

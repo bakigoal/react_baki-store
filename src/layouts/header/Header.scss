@@ -1,5 +1,24 @@
 .header {
 
+  min-height: 65px !important;
+
+  a.nav-link {
+    padding: 0 !important;
+    color: #333 !important;
+    line-height: 1.7;
+    font-size: 15px;
+    border-bottom: 1px solid transparent;
+  }
+
+  a.nav-link.active {
+    color: #e65540 !important;
+  }
+
+  a.nav-link:hover {
+    border-bottom: 1px solid;
+  }
+
+
   @media all and (min-width: 0px) and (max-width: 991px) {
     .header-desktop {
       display: none;

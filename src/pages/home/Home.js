@@ -3,8 +3,26 @@ import React from 'react';
 import slide1 from '../../assets/images/master-slide-01.jpg'
 import slide2 from '../../assets/images/master-slide-02.jpg'
 import slide3 from '../../assets/images/master-slide-03.jpg'
+import feat1 from '../../assets/images/item-01.jpg'
+import feat2 from '../../assets/images/item-02.jpg'
+import feat3 from '../../assets/images/item-03.jpg'
+import feat4 from '../../assets/images/item-04.jpg'
 import MainCarousel from "./sections/MainCarousel";
 import Banner from "./sections/Banner";
+import Product from "../../model/Product";
+import FeaturedProducts from "./sections/FeaturedProducts";
+
+const Home = () => {
+    return (
+        <>
+            <MainCarousel slides={slides}/>
+            <Banner/>
+            <FeaturedProducts products={featuredProducts} />
+        </>
+    );
+}
+
+export default Home;
 
 const slides = [
     {
@@ -24,13 +42,13 @@ const slides = [
     },
 ]
 
-const Home = () => {
-    return (
-        <>
-            <MainCarousel slides={slides}/>
-            <Banner/>
-        </>
-    );
-}
-
-export default Home;
+const featuredProducts = [
+    new Product(feat1, "Boxy7 T-Shirt with Roll Sleeve", 20.0),
+    new Product(feat2, "Denim jacket blue", 92.5),
+    new Product(feat3, "Coach slim easton black", 165.9),
+    new Product(feat4, "Frayed denim shorts", 29.5),
+    new Product(feat1, "Herschel supply co 25l", 75.0),
+    new Product(feat2, "Denim jacket blue", 92.5),
+    new Product(feat3, "Coach slim easton black", 165.9),
+    new Product(feat4, "Frayed denim shorts", 29.5),
+]

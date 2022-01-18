@@ -5,7 +5,7 @@ import React from "react";
 const HeaderNavigation = () => (
     <Nav
         activeKey={useLocation().pathname}
-        className="me-auto">
+        className="gap-4">
         <Nav.Link href="/">Home</Nav.Link>
         <Nav.Link href="/shop">Shop</Nav.Link>
         <Nav.Link href="/sale">Sale</Nav.Link>

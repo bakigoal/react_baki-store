@@ -7,6 +7,20 @@ import itemCart1 from "./assets/images/item-cart-01.jpg";
 import itemCart2 from "./assets/images/item-cart-02.jpg";
 import itemCart3 from "./assets/images/item-cart-03.jpg";
 
+const App = () => (
+    <Router>
+        <div className="d-flex flex-column min-vh-100">
+            <Header cartItems={cartItems}/>
+            <div className="flex-grow-1">
+                <Main/>
+            </div>
+            <Footer/>
+        </div>
+    </Router>
+)
+
+export default App
+
 const cartItems = [
     {
         img: itemCart1,
@@ -27,17 +41,3 @@ const cartItems = [
         price: 17.00
     }
 ]
-
-const App = () => (
-    <Router>
-        <div className="d-flex flex-column min-vh-100">
-            <Header cartItems={cartItems}/>
-            <div className="flex-grow-1">
-                <Main/>
-            </div>
-            <Footer/>
-        </div>
-    </Router>
-)
-
-export default App
