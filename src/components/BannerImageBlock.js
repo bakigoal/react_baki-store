@@ -1,7 +1,7 @@
 import {Card} from "react-bootstrap";
 import LightButton from "./LightButton";
 
-const ImageBlock = ({img, label}) => (
+const BannerImageBlock = ({img, label}) => (
     <Card className="text-white mb-4 hov-img-zoom hov-pointer">
         <Card.Img src={img} alt={label}/>
         <Card.ImgOverlay>
@@ -12,4 +12,4 @@ const ImageBlock = ({img, label}) => (
     </Card>
 )
 
-export default ImageBlock
+export default BannerImageBlock
