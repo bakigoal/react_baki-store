@@ -1,14 +1,14 @@
 import {Route, Routes} from "react-router-dom";
-import Home from "./pages/home/Home";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
+import Home from "../../pages/home/Home";
+import Contact from "../../pages/Contact";
+import About from "../../pages/About";
 import React, {useEffect} from "react";
-import Shop from "./pages/Shop";
-import Sale from "./pages/Sale";
-import Features from "./pages/Features";
-import Blog from "./pages/Blog";
+import Shop from "../../pages/Shop";
+import Sale from "../../pages/Sale";
+import Features from "../../pages/Features";
+import Blog from "../../pages/Blog";
 import './Main.scss'
-import Cart from "./pages/Cart";
+import Cart from "../../pages/Cart";
 
 const Main = ({setCartItems}) => (
     <main className="main-content">

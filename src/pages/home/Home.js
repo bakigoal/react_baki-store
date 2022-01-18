@@ -1,18 +1,18 @@
 import React from 'react';
 
-import slide1 from '../../../../assets/images/master-slide-01.jpg'
-import slide2 from '../../../../assets/images/master-slide-02.jpg'
-import slide3 from '../../../../assets/images/master-slide-03.jpg'
-import feat1 from '../../../../assets/images/item-01.jpg'
-import feat2 from '../../../../assets/images/item-02.jpg'
-import feat3 from '../../../../assets/images/item-03.jpg'
-import feat4 from '../../../../assets/images/item-04.jpg'
+import slide1 from '../../assets/images/master-slide-01.jpg'
+import slide2 from '../../assets/images/master-slide-02.jpg'
+import slide3 from '../../assets/images/master-slide-03.jpg'
+import feat1 from '../../assets/images/item-01.jpg'
+import feat2 from '../../assets/images/item-02.jpg'
+import feat3 from '../../assets/images/item-03.jpg'
+import feat4 from '../../assets/images/item-04.jpg'
 import MainCarousel from "./sections/MainCarousel";
 import Banner from "./sections/Banner";
-import Product from "../../../../model/Product";
+import Product from "../../model/Product";
 import FeaturedProducts from "./sections/FeaturedProducts";
 import HomeBlogSection from "./sections/HomeBlogSection";
-import BlogService from "../../../../service/BlogService";
+import BlogService from "../../service/BlogService";
 
 const Home = ({setCartItems}) => {
     return (

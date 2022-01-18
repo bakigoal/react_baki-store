@@ -1,4 +1,4 @@
-import logo from "../../../assets/logo.svg"
+import logo from "../assets/logo.svg"
 import React from "react";
 import Container from "react-bootstrap/Container";
 
