@@ -32,9 +32,4 @@ const useLocalStorage = (key, initialValue) => {
     return [storedValue, setValue];
 };
 
-const getCartItems = () => {
-    const item = window.localStorage.getItem(CART_KEY);
-    return item ? JSON.parse(item) : []
-}
-
-export {useLocalStorage, CART_KEY, getCartItems}
+export {useLocalStorage, CART_KEY}

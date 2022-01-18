@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {BrowserRouter as Router} from "react-router-dom";
 import Header from "./layouts/header/Header";
 import Footer from "./layouts/footer/Footer";

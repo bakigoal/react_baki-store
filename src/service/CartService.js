@@ -1,10 +1,10 @@
-import {getCartItems} from "../utils/LocalStorageUtil";
+import {CART_KEY} from "../utils/LocalStorageUtil";
 import CartItem from "../model/CartItem";
 
 class CartService {
 
     addToCart(product, setCartItems) {
-        const cartItems = getCartItems()
+        const cartItems = this.getCartItems()
         const idEqualPredicate = item => item.productId === product.id
 
         if (cartItems.some(idEqualPredicate)) {
@@ -19,7 +19,11 @@ class CartService {
             const cartItem = new CartItem(product.id, product.image, product.name, 1, product.price)
             setCartItems([...cartItems, cartItem])
         }
+    }
 
+    getCartItems() {
+        const item = window.localStorage.getItem(CART_KEY);
+        return item ? JSON.parse(item) : []
     }
 }
 
