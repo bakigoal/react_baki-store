@@ -2,6 +2,10 @@
   height: 27px;
   position: relative;
 
+  .header-icon1:hover, .icons-badge:hover {
+    cursor: pointer;
+  }
+
   .icons-badge {
     font-size: 15px;
     font-weight: 600;
