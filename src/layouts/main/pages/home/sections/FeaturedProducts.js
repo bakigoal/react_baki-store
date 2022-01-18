@@ -1,5 +1,5 @@
-import SectionTitle from "../../../components/SectionTitle";
-import ProductsSlide from "../../../components/ProductsSlide";
+import SectionTitle from "../../../../../components/SectionTitle";
+import ProductsSlide from "../../../../../components/ProductsSlide";
 import Container from "react-bootstrap/Container";
 import './FeaturedProducts.scss'
 

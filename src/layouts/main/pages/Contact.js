@@ -1,5 +1,5 @@
 import React from "react";
-import User from "../model/User";
+import User from "../../../model/User";
 import Container from "react-bootstrap/Container";
 
 const Contact = () => {

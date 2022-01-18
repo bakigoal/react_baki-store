@@ -1,9 +1,9 @@
 import React from "react";
 import {Carousel, Image} from "react-bootstrap";
-import UuidGenerator from "../../../utils/UuidGenerator";
+import UuidGenerator from "../../../../../utils/UuidGenerator";
 import './MainCarousel.scss'
 import {Wave} from "react-animated-text";
-import LightButton from "../../../components/LightButton";
+import LightButton from "../../../../../components/LightButton";
 
 const MainCarousel = ({slides}) => (
     <Carousel variant="dark" className="carousel pt-0" fade as="section">

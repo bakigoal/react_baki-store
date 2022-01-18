@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
-import SectionTitle from "../../../components/SectionTitle";
+import SectionTitle from "../../../../../components/SectionTitle";
 import {Col, Row} from "react-bootstrap";
-import BlogBlock from "../../../components/BlogBlock";
+import BlogBlock from "../../../../../components/BlogBlock";
 
 const HomeBlogSection = ({blogs}) => (
     <Container className="home-blog pb-5 pt-5" as="section">
