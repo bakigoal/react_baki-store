@@ -1,7 +1,6 @@
 import {Card} from "react-bootstrap";
 import React from "react";
 import {Link} from "react-router-dom";
-import DateFormatter from "../utils/DateFormatter";
 import TextFormatter from "../utils/TextFormatter";
 
 const BlogBlock = ({blog}) => (
@@ -15,7 +14,7 @@ const BlogBlock = ({blog}) => (
                 <span className="s-text6">by </span>
                 <span className="s-text7">{blog.author}</span>
                 <span className="s-text6"> on </span>
-                <span className="s-text7">{DateFormatter.format(blog.date)}</span>
+                <span className="s-text7">{TextFormatter.formatDate(blog.date)}</span>
             </Card.Subtitle>
             <Card.Text className="pt-3">
                 <span className="s-text8">

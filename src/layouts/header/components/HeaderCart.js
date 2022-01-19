@@ -3,11 +3,11 @@ import './HeaderCart.scss'
 
 import React from "react";
 import HeaderCartItem from "./HeaderCartItem";
-import formatCurrency from "../../../utils/CurrencyFormatter";
 import UuidGenerator from "../../../utils/UuidGenerator";
 import DarkButton from "../../../components/DarkButton";
 import {Badge, Image} from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
+import TextFormatter from "../../../utils/TextFormatter";
 
 
 const HeaderCart = ({cart}) => {
@@ -42,7 +42,7 @@ const HeaderCart = ({cart}) => {
                 </ul>
 
                 <div className="header-cart-total pt-2 pb-4 pr-1">
-                    Total: {formatCurrency(calcTotalPrice())}
+                    Total: {TextFormatter.formatCurrency(calcTotalPrice())}
                 </div>
 
                 <div className="d-flex gap-3">

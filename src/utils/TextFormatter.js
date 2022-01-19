@@ -1,6 +1,6 @@
 export default class TextFormatter {
 
-    static truncate(text, count) {
+    static truncate = (text, count) => {
         if (text.length <= count) {
             return text;
         }
@@ -10,5 +10,25 @@ export default class TextFormatter {
             return truncated
         }
         return truncated + "..."
+    };
+
+    static formatCurrency = (price) => {
+        let format = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        });
+
+        return format.format(price)
+    }
+
+    static formatDate(date) {
+        const mm = date.getMonth() + 1;
+        const dd = date.getDate();
+
+        return [
+            (dd > 9 ? '' : '0') + dd,
+            (mm > 9 ? '' : '0') + mm,
+            date.getFullYear()
+        ].join('.');
     }
 }

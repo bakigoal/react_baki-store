@@ -1,6 +1,6 @@
 import React from "react";
-import formatCurrency from "../../../utils/CurrencyFormatter";
 import {Image} from "react-bootstrap";
+import TextFormatter from "../../../utils/TextFormatter";
 
 const HeaderCartItem = ({cartItem}) => (
     <li className="d-flex pb-1 pt-1">
@@ -14,7 +14,7 @@ const HeaderCartItem = ({cartItem}) => (
             </a>
 
             <span className="header-cart-item-info">
-                {cartItem.count} x {formatCurrency(cartItem.price)}
+                {cartItem.count} x {TextFormatter.formatCurrency(cartItem.price)}
             </span>
         </div>
     </li>
