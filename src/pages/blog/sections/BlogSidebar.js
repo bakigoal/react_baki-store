@@ -1,18 +1,18 @@
-import BlogSidebarCategories from "./BlogSidebarCategories";
-import BlogSidebarFeaturedProducts from "./BlogSidebarFeaturedProd";
-import BlogSidebarArchive from "./BlogSidebarArchive";
-import BlogSidebarTags from "./BlogSidebarTags";
+import Categories from "./sidebar/Categories";
+import BlogSidebarFeaturedProducts from "./sidebar/FeaturedProducts";
+import Archive from "./sidebar/Archive";
+import Tags from "./sidebar/Tags";
 import {Container} from "react-bootstrap";
-import BlogSidebarSearch from "./BlogSidebarSearch";
+import Search from "./sidebar/Search";
 
 const BlogSidebar = () => {
     return (
         <Container>
-            <BlogSidebarSearch />
-            <BlogSidebarCategories />
+            <Search />
+            <Categories />
             <BlogSidebarFeaturedProducts />
-            <BlogSidebarArchive />
-            <BlogSidebarTags />
+            <Archive />
+            <Tags />
         </Container>
     )
 }

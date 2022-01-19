@@ -1,9 +1,9 @@
-import '../Blog.scss'
+import '../../Blog.scss'
 
 const data = ['Fashion','Beauty','Street Style','Life Style','DIY & Crafts']
 
-const BlogSidebarCategories = () => (
-    <div className="pb-5 pt-5 SidebarCategories">
+const Categories = () => (
+    <div className="pb-5 pt-5 sidebarCategories">
         <h4>Categories</h4>
         <ul>
             {data.map(list => (
@@ -15,4 +15,4 @@ const BlogSidebarCategories = () => (
     </div>
 )
 
-export default BlogSidebarCategories
+export default Categories

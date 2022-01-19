@@ -8,19 +8,21 @@ import {blogService} from "../../service/BlogService";
 import PageTitleBanner from "../../components/PageTitleBanner";
 
 const Blog = () => {
-    return <Container fluid>
-        <PageTitleBanner img={banner}/>
-        <Container>
-            <Row className="pb-5 pt-5" >
-                <Col className="ps-5 pe-5" lg={8}>
-                    <BlogList blogs={blogService.getAllBlogs()}/>
-                </Col>
-                <Col lg={4}>
-                    <BlogSidebar/>
-                </Col>
-            </Row>
+    return (
+        <Container fluid>
+            <PageTitleBanner img={banner}/>
+            <Container>
+                <Row className="pb-5 pt-5">
+                    <Col className="ps-5 pe-5" lg={8}>
+                        <BlogList blogs={blogService.getAllBlogs()}/>
+                    </Col>
+                    <Col lg={4}>
+                        <BlogSidebar/>
+                    </Col>
+                </Row>
+            </Container>
         </Container>
-    </Container>;
+)
 }
 
 export default Blog

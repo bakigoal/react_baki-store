@@ -1,7 +1,7 @@
-const BlogSidebarSearch = () => (
+const Search = () => (
     <div className="pb-5 ">
         BlogSidebarSearch
     </div>
 )
 
-export default BlogSidebarSearch
+export default Search
