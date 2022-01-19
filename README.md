@@ -1,4 +1,4 @@
-# Getting Started with Create React Car
+# Store
 
 This project was bootstrapped with [Create React Car](https://github.com/facebook/create-react-app).
 
