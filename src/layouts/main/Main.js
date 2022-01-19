@@ -3,7 +3,7 @@ import Home from "../../pages/home/Home";
 import Contact from "../../pages/Contact";
 import About from "../../pages/About";
 import React, {useEffect} from "react";
-import Shop from "../../pages/Shop";
+import Shop from "../../pages/shop/Shop";
 import Sale from "../../pages/Sale";
 import Features from "../../pages/Features";
 import Blog from "../../pages/Blog";
@@ -13,7 +13,7 @@ import Cart from "../../pages/Cart";
 const Main = ({setCartItems}) => (
     <main className="main-content">
         <Routes>
-            <Route path="shop" element={page("Shop", <Shop/>)}/>
+            <Route path="shop" element={page("Shop", <Shop setCartItems={setCartItems}/>)}/>
             <Route path="sale" element={page("Sale", <Sale/>)}/>
             <Route path="features" element={page("Features", <Features/>)}/>
             <Route path="blog" element={page("Blog", <Blog/>)}/>
