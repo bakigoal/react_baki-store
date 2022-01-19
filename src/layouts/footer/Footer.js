@@ -69,7 +69,7 @@ const Footer = () => {
                         </Col>
 
                         <Col>
-                            <FooterLinkList title="Links" links={helpLinks}/>
+                            <FooterLinkList title="Help" links={helpLinks}/>
                         </Col>
                     </Row>
                 </Col>
