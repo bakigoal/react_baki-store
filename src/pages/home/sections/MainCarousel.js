@@ -3,7 +3,6 @@ import {Carousel, Image} from "react-bootstrap";
 import UuidGenerator from "../../../utils/UuidGenerator";
 import './MainCarousel.scss'
 import {Wave} from "react-animated-text";
-import LightButton from "../../../components/LightButton";
 import CurlyButton from "../../../components/CurlyButton";
 
 const MainCarousel = ({slides}) => (
