@@ -1,15 +1,14 @@
-import ProductSort from "./ProductSort";
-import ProductPagination from "./ProductPagination";
 import {Col, Row} from "react-bootstrap";
+import CustomSelect from "../../../components/CustomSelect";
 
 const ProductSortAndPagination = () => (
-    <div style={{background: "beige"}} className="d-flex pb-40 justify-content-between align-items-center flex-md-wrap">
+    <div className="d-flex pb-40 justify-content-between align-items-center flex-md-wrap">
         <Row>
             <Col className="w-200">
-                <ProductSort/>
+                <CustomSelect options={sortOptions} defaultValue={3}/>
             </Col>
             <div className="w-200">
-                <ProductPagination/>
+                <CustomSelect options={paginationOptions} defaultValue={1}/>
             </div>
         </Row>
 
@@ -18,5 +17,21 @@ const ProductSortAndPagination = () => (
         </div>
     </div>
 )
+
+const sortOptions = [
+    {value: 1, text: 'Alphabetically, A-Z'},
+    {value: 2, text: 'Alphabetically, Z-A'},
+    {value: 3, text: 'Price, low to high'},
+    {value: 4, text: 'Price, high to low'},
+    {value: 5, text: 'Date, new to old'},
+    {value: 6, text: 'Date, old to new'}
+]
+
+const paginationOptions = [
+    {value: 1, text: 10},
+    {value: 2, text: 20},
+    {value: 3, text: 30},
+    {value: 4, text: 'All'},
+]
 
 export default ProductSortAndPagination

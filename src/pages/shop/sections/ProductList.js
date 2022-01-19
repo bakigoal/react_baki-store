@@ -1,5 +1,7 @@
 const ProductList = () => (
-    <div style={{background: "green"}}>Products</div>
+    <div>
+        Products
+    </div>
 )
 
 export default ProductList

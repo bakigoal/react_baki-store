@@ -10,7 +10,7 @@ import ProductSortAndPagination from "./sections/ProductSortAndPagination";
 const Shop = () => (
     <>
         <PageTitleBanner title="Products" img={banner}/>
-        <Container>
+        <Container className="pt-40">
             <Row>
                 <Col sm={6} md={4} lg={3} className="pb-40">
                     <ProductFilterSidebar/>
