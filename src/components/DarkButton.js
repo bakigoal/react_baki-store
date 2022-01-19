@@ -1,10 +1,8 @@
-import Button from "react-bootstrap/Button";
 import React from "react";
+import CurlyButton from "./CurlyButton";
 
 const DarkButton = ({text, type, onClick}) => (
-    <div className="button-container-size">
-        <Button variant="dark" type={type} className="text-uppercase w-100 border-radius-23" onClick={onClick}>{text}</Button>
-    </div>
+    <CurlyButton onClick={onClick} text={text} type={type} variant="dark"/>
 )
 
 export default DarkButton

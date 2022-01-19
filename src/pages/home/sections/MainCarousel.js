@@ -4,6 +4,7 @@ import UuidGenerator from "../../../utils/UuidGenerator";
 import './MainCarousel.scss'
 import {Wave} from "react-animated-text";
 import LightButton from "../../../components/LightButton";
+import CurlyButton from "../../../components/CurlyButton";
 
 const MainCarousel = ({slides}) => (
     <Carousel variant="dark" className="carousel pt-0" fade as="section">
@@ -24,7 +25,7 @@ const MainCarousel = ({slides}) => (
                     </span>
 
                     <div className="d-flex justify-content-center pt-3 pb-3">
-                        <LightButton text="Shop Now" type="submit"/>
+                        <CurlyButton text="Shop Now" type="submit" variant="light"/>
                     </div>
                 </Carousel.Caption>
             </Carousel.Item>
