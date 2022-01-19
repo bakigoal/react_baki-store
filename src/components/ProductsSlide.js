@@ -5,6 +5,7 @@ import ProductBlock from "./ProductBlock";
 
 const ProductsSlide = ({products, countPerSlide, setCartItems}) => {
     let slideCount = Math.ceil(products.length / countPerSlide)
+    let slides = [...Array(slideCount).keys()]
 
     const getProductsForSlide = slideNumber => {
         let start = slideNumber * countPerSlide;
@@ -14,7 +15,7 @@ const ProductsSlide = ({products, countPerSlide, setCartItems}) => {
 
     return (
         <Carousel variant="dark" className="products-slide carousel pt-0" indicators={false} interval={10000}>
-            {[...Array(slideCount).keys()].map(slideNumber => (
+            {slides.map(slideNumber => (
                 <Carousel.Item as="div" className="carousel-image-container h-100" key={slideNumber}>
                     <Row className="justify-content-center">
                         {getProductsForSlide(slideNumber).map(product => (
