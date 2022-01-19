@@ -13,12 +13,12 @@ export default class TextFormatter {
     };
 
     static formatCurrency = price => {
-        let format = new Intl.NumberFormat('en-US', {
+        let formatter = new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD'
         });
 
-        return format.format(price)
+        return formatter.format(price)
     }
 
     static formatDate = date => {
