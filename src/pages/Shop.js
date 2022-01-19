@@ -5,7 +5,7 @@ import {Image} from "react-bootstrap";
 
 const Shop = () => {
     return <Container>
-        <h2><Image src={logo} alt="Logo" width="100px"/> Super Shop, Really super!!!</h2>
+        <h2><Image src={logo} alt="Logo" width="100px"/> Super Shop, Really super!!! Superrrrrr!!!</h2>
     </Container>;
 }
 
