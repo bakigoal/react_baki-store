@@ -7,7 +7,7 @@ import BlogSidebarSearch from "./BlogSidebarSearch";
 
 const BlogSidebar = () => {
     return (
-        <Container style={{background:"yellow"}}>
+        <Container>
             <BlogSidebarSearch />
             <BlogSidebarCategories />
             <BlogSidebarFeaturedProducts />

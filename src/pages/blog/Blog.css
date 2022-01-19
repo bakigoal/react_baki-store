@@ -1,0 +1,20 @@
+.SidebarCategories {
+
+}
+.SidebarCategories ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.bo6 {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    list-style: none;
+    padding-top: 6px;
+    padding-bottom: 8px;
+}

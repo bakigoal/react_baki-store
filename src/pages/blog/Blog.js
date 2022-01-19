@@ -1,14 +1,15 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import BlogBanner from "./sections/BlogBanner";
+import banner from "../../assets/images/heading-pages-05.jpg"
 import BlogList from "./sections/BlogList";
 import BlogSidebar from "./sections/BlogSidebar";
 import {Col, Row} from "react-bootstrap";
 import {blogService} from "../../service/BlogService";
+import PageTitleBanner from "../../components/PageTitleBanner";
 
 const Blog = () => {
     return <Container fluid>
-        <BlogBanner/>
+        <PageTitleBanner img={banner}/>
         <Container>
             <Row className="pb-5 pt-5" >
                 <Col className="ps-5 pe-5" lg={8}>
