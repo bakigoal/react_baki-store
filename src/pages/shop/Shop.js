@@ -12,7 +12,7 @@ const Shop = ({setCartItems}) => {
     const products = productService.getAllProducts()
 
     return (
-        <>
+        <div>
             <PageTitleBanner title="Products" img={banner}/>
             <Container className="pt-40">
                 <Row>
@@ -25,7 +25,7 @@ const Shop = ({setCartItems}) => {
                     </Col>
                 </Row>
             </Container>
-        </>
+        </div>
     );
 }
 
