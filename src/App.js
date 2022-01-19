@@ -3,10 +3,10 @@ import {BrowserRouter as Router} from "react-router-dom";
 import Header from "./layouts/header/Header";
 import Footer from "./layouts/footer/Footer";
 import Main from "./layouts/main/Main";
-import {CART_KEY, useLocalStorage} from "./utils/LocalStorageUtil";
+import {CART_KEY, useLocalStorageState} from "./utils/LocalStorageUtil";
 
 const App = () => {
-    const [cartItems, setCartItems] = useLocalStorage(CART_KEY, [])
+    const [cartItems, setCartItems] = useLocalStorageState(CART_KEY, [])
 
     return (
         <Router>

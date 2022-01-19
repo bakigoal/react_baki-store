@@ -2,7 +2,7 @@ import {useState} from "react";
 
 const CART_KEY = "cartItems"
 
-const useLocalStorage = (key, initialValue) => {
+const useLocalStorageState = (key, initialValue) => {
     const [storedValue, setStoredValue] = useState(() => {
         try {
             const item = window.localStorage.getItem(key);
@@ -23,4 +23,4 @@ const useLocalStorage = (key, initialValue) => {
     return [storedValue, setValue];
 };
 
-export {useLocalStorage, CART_KEY}
+export {useLocalStorageState, CART_KEY}
