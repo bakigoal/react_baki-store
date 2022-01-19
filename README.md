@@ -1,4 +1,4 @@
-# Store
+# Test App to learn React https://bakigoal.github.io/react_baki-store/
 
 This project was bootstrapped with [Create React Car](https://github.com/facebook/create-react-app).
 
