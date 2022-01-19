@@ -1,4 +1,4 @@
-import './../Blog.css'
+import '../Blog.scss'
 
 const data = ['Fashion','Beauty','Street Style','Life Style','DIY & Crafts']
 
