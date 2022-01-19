@@ -12,7 +12,7 @@ export default class TextFormatter {
         return truncated + "..."
     };
 
-    static formatCurrency = (price) => {
+    static formatCurrency = price => {
         let format = new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD'
@@ -21,7 +21,7 @@ export default class TextFormatter {
         return format.format(price)
     }
 
-    static formatDate(date) {
+    static formatDate = date => {
         const mm = date.getMonth() + 1;
         const dd = date.getDate();
 
@@ -30,5 +30,5 @@ export default class TextFormatter {
             (mm > 9 ? '' : '0') + mm,
             date.getFullYear()
         ].join('.');
-    }
+    };
 }
