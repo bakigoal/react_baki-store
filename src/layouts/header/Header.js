@@ -2,9 +2,9 @@ import Container from "react-bootstrap/Container";
 import {Navbar} from "react-bootstrap";
 import React, {useState} from "react";
 import './Header.scss'
-import HeaderBrand from "./components/HeaderBrand";
-import HeaderNavigation from "./components/HeaderNavigation";
-import HeaderIcons from "./components/HeaderIcons";
+import HeaderBrand from "./sections/HeaderBrand";
+import HeaderNavigation from "./sections/HeaderNavigation";
+import HeaderIcons from "./sections/HeaderIcons";
 
 const Header = ({cartItems}) => {
     const [visibleCart, changeCartVisibility] = useState(false)
