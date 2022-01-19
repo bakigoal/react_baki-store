@@ -4,20 +4,20 @@ import CartItem from "../model/CartItem";
 class CartService {
 
     addToCart(product, setCartItems) {
-        const cartItems = this.getCartItems()
-        const idEqualPredicate = item => item.productId === product.id
+        const oldItems = this.getCartItems()
+        const idEqual = item => item.productId === product.id
 
-        if (cartItems.some(idEqualPredicate)) {
-            const items = cartItems.map(item => {
-                if (idEqualPredicate(item)) {
+        if (oldItems.some(idEqual)) {
+            const newItems = oldItems.map(item => {
+                if (idEqual(item)) {
                     return {...item, count: item.count + 1}
                 }
                 return item
             })
-            setCartItems(items)
+            setCartItems(newItems)
         } else {
-            const cartItem = new CartItem(product.id, product.image, product.name, 1, product.price)
-            setCartItems([...cartItems, cartItem])
+            const newCartItem = new CartItem(product.id, product.image, product.name, 1, product.price)
+            setCartItems([...oldItems, newCartItem])
         }
     }
 
