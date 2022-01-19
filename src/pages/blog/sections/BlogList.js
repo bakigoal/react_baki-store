@@ -1,7 +1,9 @@
-const BlogList = () => {
+import BlogItem from "./BlogItem";
+
+const BlogList = ({blogs}) => {
     return (
         <div style={{background:"red"}}>
-            blog list
+            {blogs.map(blog => (<BlogItem  blog={blog} />))}
         </div>
     )
 }
