@@ -2,7 +2,7 @@ import BlogItem from "./BlogItem"
 
 const BlogList = ({blogs}) => {
     return (
-        <div style={{background:"red"}}>
+        <div>
             {blogs.map((blog) => (<BlogItem blog={blog} />))}
         </div>
     )
