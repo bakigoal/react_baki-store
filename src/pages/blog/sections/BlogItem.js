@@ -1,5 +1,5 @@
-import BlogBlock from "../../../components/BlogBlock";
-import {Container} from "react-bootstrap";
+import BlogBlock from "../../../components/BlogBlock"
+import {Container} from "react-bootstrap"
 
 const BlogItem = ({blog}) => (
     <Container>

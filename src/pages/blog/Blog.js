@@ -1,11 +1,11 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
+import React from "react"
+import Container from "react-bootstrap/Container"
 import banner from "../../assets/images/heading-pages-05.jpg"
-import BlogList from "./sections/BlogList";
-import BlogSidebar from "./sections/BlogSidebar";
-import {Col, Row} from "react-bootstrap";
-import {blogService} from "../../service/BlogService";
-import PageTitleBanner from "../../components/PageTitleBanner";
+import BlogList from "./sections/BlogList"
+import BlogSidebar from "./sections/BlogSidebar"
+import {Col, Row} from "react-bootstrap"
+import {blogService} from "../../service/BlogService"
+import PageTitleBanner from "../../components/PageTitleBanner"
 
 const Blog = () => {
     return (
@@ -16,7 +16,7 @@ const Blog = () => {
                     <Col className="ps-5 pe-5" lg={8}>
                         <BlogList blogs={blogService.getAllBlogs()}/>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={3}>
                         <BlogSidebar/>
                     </Col>
                 </Row>
