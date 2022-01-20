@@ -9,7 +9,7 @@ const App = () => {
     const [cartItems, setCartItems] = useLocalStorageState(CART_KEY, [])
 
     return (
-        <Router basename="/react_baki-store">
+        <Router>
             <div className="d-flex flex-column min-vh-100">
                 <Header cartItems={cartItems}/>
                 <div className="flex-grow-1">
