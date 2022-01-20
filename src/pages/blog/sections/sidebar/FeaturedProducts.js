@@ -5,7 +5,7 @@ const BlogSidebarFeaturedProducts = ({products}) => (
     <div className="pb-5 pt-5">
         <h4 className="m-text23 pt-65 pb-34">Featured Products</h4>
                 <ul className="p-lg-0">
-                    { products.map(product => {
+                    {products.map(product => {
 
                         return (
                             <li className="flex-w pb-20 ls-none">
