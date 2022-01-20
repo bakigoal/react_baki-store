@@ -1,4 +1,14 @@
-# Test App to learn React https://bakigoal.github.io/react_baki-store/
+# Test App to learn React
+
+---
+
+## Develop stand: https://bakigoal.github.io/store/
+
+## Main stand: https://bakigoal.herokuapp.com/store/
+
+---
+
+
 
 This project was bootstrapped with [Create React Car](https://github.com/facebook/create-react-app).
 
