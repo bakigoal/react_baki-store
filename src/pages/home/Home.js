@@ -13,7 +13,7 @@ const Home = ({setCartItems}) => {
         <>
             <MainCarousel slides={carouselService.getSlidesForHomeCarousel()}/>
             <Banner banners={bannerService.getAllBanners()}/>
-            <FeaturedProducts products={productService.getAllProducts()} setCartItems={setCartItems}/>
+            <FeaturedProducts products={productService.getProductsByCategory("featured")} setCartItems={setCartItems}/>
             <HomeBlogSection blogs={blogService.getAllBlogs()}/>
         </>
     );
