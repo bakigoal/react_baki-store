@@ -4,7 +4,7 @@
 
 ## Develop stand: https://bakigoal.github.io/store/
 
-## Main stand: https://bakigoal.herokuapp.com/store/
+## Main stand: https://bakigoal-store.herokuapp.com/
 
 ---
 
