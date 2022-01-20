@@ -7,7 +7,7 @@ const CategoryFilter = ({categories}) => (
         <ul className="pb-40">
             {categories.map(category => (
                 <li className="pt-1" key={category.url}>
-                    <NavLink to={category.url}>{category.name}</NavLink>
+                    <NavLink to={"/shop/" + category.url}>{category.name}</NavLink>
                 </li>
             ))}
         </ul>
