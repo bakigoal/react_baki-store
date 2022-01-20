@@ -1,17 +1,14 @@
-import Categories from "./sidebar/Categories"
 import BlogSidebarFeaturedProducts from "./sidebar/FeaturedProducts"
-import Archive from "./sidebar/Archive"
 import Tags from "./sidebar/Tags"
 import {Container} from "react-bootstrap"
 import Search from "./sidebar/Search"
+import {productService} from "../../../service/ProductService";
 
 const BlogSidebar = () => {
     return (
         <Container>
             <Search />
-            <Categories />
-            <BlogSidebarFeaturedProducts />
-            <Archive />
+            <BlogSidebarFeaturedProducts products={productService.getAllProducts()} />
             <Tags />
         </Container>
     )
