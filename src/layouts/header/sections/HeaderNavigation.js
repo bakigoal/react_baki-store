@@ -7,7 +7,7 @@ const HeaderNavigation = () => (
         activeKey={useLocation().pathname}
         className="gap-4">
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/shop/all">Shop</NavLink>
+        <NavLink to="/shop">Shop</NavLink>
         <NavLink to="/sale">Sale</NavLink>
         <NavLink to="/features">Features</NavLink>
         <NavLink to="/blog">Blog</NavLink>

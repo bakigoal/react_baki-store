@@ -1,4 +1,4 @@
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import Home from "../../pages/home/Home";
 import Contact from "../../pages/Contact";
 import About from "../../pages/About";
@@ -13,13 +13,14 @@ import Cart from "../../pages/Cart";
 const Main = ({setCartItems}) => (
     <main className="main-content">
         <Routes>
-            <Route path="shop/:category" element={page("Shop", <Shop setCartItems={setCartItems}/>)}/>
-            <Route path="sale" element={page("Sale", <Sale/>)}/>
-            <Route path="features" element={page("Features", <Features/>)}/>
-            <Route path="blog" element={page("Blog", <Blog/>)}/>
-            <Route path="contact" element={page("Contact", <Contact/>)}/>
-            <Route path="about" element={page("About", <About/>)}/>
-            <Route path="cart" element={page("Shopping Cart", <Cart/>)}/>
+            <Route path="/shop/:category" element={page("Shop", <Shop setCartItems={setCartItems}/>)}/>
+            <Route path="/shop" element={ <Navigate to="/shop/all"/> }/>
+            <Route path="/sale" element={page("Sale", <Sale/>)}/>
+            <Route path="/features" element={page("Features", <Features/>)}/>
+            <Route path="/blog" element={page("Blog", <Blog/>)}/>
+            <Route path="/contact" element={page("Contact", <Contact/>)}/>
+            <Route path="/about" element={page("About", <About/>)}/>
+            <Route path="/cart" element={page("Shopping Cart", <Cart/>)}/>
             <Route path="/" element={page("Home", <Home setCartItems={setCartItems}/>)}/>
         </Routes>
     </main>
