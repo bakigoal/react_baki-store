@@ -7,9 +7,11 @@ import banner from '../../assets/images/heading-pages-01.jpg'
 import PageTitleBanner from "../../components/PageTitleBanner";
 import ProductSortAndPagination from "./sections/ProductSortAndPagination";
 import {productService} from "../../service/ProductService";
+import {useParams} from "react-router-dom";
 
 const Shop = ({setCartItems}) => {
-    const products = productService.getAllProducts()
+    const { category } = useParams()
+    const products = productService.getProductsByCategory(category)
 
     return (
         <div>
