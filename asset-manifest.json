@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react_baki-store/static/css/main.c89298a2.css",
-    "main.js": "/react_baki-store/static/js/main.a1034dfb.js",
+    "main.css": "/react_baki-store/static/css/main.7f6c90de.css",
+    "main.js": "/react_baki-store/static/js/main.8c36dafb.js",
     "static/js/787.7c7730b1.chunk.js": "/react_baki-store/static/js/787.7c7730b1.chunk.js",
     "static/media/logo.svg": "/react_baki-store/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/react_baki-store/index.html",
-    "main.c89298a2.css.map": "/react_baki-store/static/css/main.c89298a2.css.map",
-    "main.a1034dfb.js.map": "/react_baki-store/static/js/main.a1034dfb.js.map",
+    "main.7f6c90de.css.map": "/react_baki-store/static/css/main.7f6c90de.css.map",
+    "main.8c36dafb.js.map": "/react_baki-store/static/js/main.8c36dafb.js.map",
     "787.7c7730b1.chunk.js.map": "/react_baki-store/static/js/787.7c7730b1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c89298a2.css",
-    "static/js/main.a1034dfb.js"
+    "static/css/main.7f6c90de.css",
+    "static/js/main.8c36dafb.js"
   ]
 }
