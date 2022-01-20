@@ -17,6 +17,15 @@ class ProductService {
             new Product(8, feat4, "Frayed denim shorts", 29.5),
         ]
     }
+
+    getCategories() {
+        return [
+            {url:"best-sellers", name:"Best Seller"},
+            {url:"featured", name:"Featured"},
+            {url:"men", name:"Men"},
+            {url:"women", name:"Women"},
+        ]
+    }
 }
 
 export const productService = new ProductService()
