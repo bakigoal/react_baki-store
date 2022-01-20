@@ -1,6 +1,6 @@
 const CategoryFilter = () => (
     <div>
-        Categories!!!TODO
+        Categories!!!
     </div>
 )
 
