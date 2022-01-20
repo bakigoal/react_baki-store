@@ -6,7 +6,7 @@ import React, {useEffect} from "react";
 import Shop from "../../pages/shop/Shop";
 import Sale from "../../pages/Sale";
 import Features from "../../pages/Features";
-import Blog from "../../pages/Blog";
+import Blog from "../../pages/blog/Blog";
 import './Main.scss'
 import Cart from "../../pages/Cart";
 
