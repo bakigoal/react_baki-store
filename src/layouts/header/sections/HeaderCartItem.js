@@ -1,6 +1,7 @@
 import React from "react";
 import {Image} from "react-bootstrap";
 import TextFormatter from "../../../utils/TextFormatter";
+import {NavLink} from "react-router-dom";
 
 const HeaderCartItem = ({cartItem}) => (
     <li className="d-flex pb-1 pt-1">
@@ -9,9 +10,9 @@ const HeaderCartItem = ({cartItem}) => (
         </div>
 
         <div className="header-cart-item-txt">
-            <a href="#" className="header-cart-item-name">
+            <NavLink className="header-cart-item-name" to="blog">
                 {cartItem.title}
-            </a>
+            </NavLink>
 
             <span className="header-cart-item-info">
                 {cartItem.count} x {TextFormatter.formatCurrency(cartItem.price)}

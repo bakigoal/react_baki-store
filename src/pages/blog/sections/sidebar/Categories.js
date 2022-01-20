@@ -1,4 +1,5 @@
 import '../../Blog.scss'
+import {NavLink} from "react-router-dom";
 
 const data = ['Fashion','Beauty','Street Style','Life Style','DIY & Crafts']
 
@@ -8,7 +9,7 @@ const Categories = () => (
         <ul>
             {data.map((list,index) => (
                 <li key={index} className='bo6'>
-                    <a href="" className="s-text13">{list}</a>
+                    <NavLink className="s-text13" to="home">{list}</NavLink>
                 </li>
             ))}
         </ul>

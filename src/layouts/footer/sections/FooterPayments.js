@@ -2,8 +2,7 @@ import UuidGenerator from "../../../utils/UuidGenerator";
 import React from "react";
 import {Image} from "react-bootstrap";
 
-
-const FooterPayments = ({links: links}) => (
+const FooterPayments = ({links}) => (
     <div className="ps-2 pe-2 text-center">
         {links.map(link => (
             <a href={link.url} className="pe-1" key={UuidGenerator.uuid4()}>
