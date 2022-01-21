@@ -8,6 +8,7 @@ class BlogService {
             {
                 id: 1,
                 img: blog1,
+                category: 'fashion',
                 author: "Author 1",
                 date: new Date(),
                 tags: ["crafts", "street", "style"],

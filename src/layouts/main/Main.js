@@ -17,7 +17,7 @@ const Main = ({setCartItems}) => (
             <Route path="/shop" element={page("Shop", <Shop setCartItems={setCartItems}/>)}/>
             <Route path="/sale" element={page("Sale", <Sale/>)}/>
             <Route path="/features" element={page("Features", <Features/>)}/>
-            <Route path="/blog" element={page("Blog", <Blog/>)}/>
+            <Route path="/blog" element={page("Blog", <Blog setCartItems={setCartItems}/>)}/>
             <Route path="/contact" element={page("Contact", <Contact/>)}/>
             <Route path="/about" element={page("About", <About/>)}/>
             <Route path="/cart" element={page("Shopping Cart", <Cart/>)}/>
