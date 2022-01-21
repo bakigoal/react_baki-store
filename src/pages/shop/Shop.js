@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Container from "react-bootstrap/Container";
 import ProductFilterSidebar from "./sections/ProductFilterSidebar";
 import {Col, Row} from "react-bootstrap";
@@ -7,11 +7,20 @@ import banner from '../../assets/images/heading-pages-01.jpg'
 import PageTitleBanner from "../../components/PageTitleBanner";
 import ProductSortAndPagination from "./sections/ProductSortAndPagination";
 import {productService} from "../../service/ProductService";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 
 const Shop = ({setCartItems}) => {
-    const { category } = useParams()
-    const products = productService.getProductsByCategory(category)
+    const {category} = useParams()
+    let navigate = useNavigate();
+
+    const navigateToAllIfNoCategory = () => {
+        if (!category || !productService.getCategories().some(c => c.url === category)) {
+            navigate("/shop/all", {replace: true})
+        }
+    }
+    useEffect(navigateToAllIfNoCategory, [category])
+
+    const products = productService.getProductsByCategory(category || 'all')
 
     return (
         <div>

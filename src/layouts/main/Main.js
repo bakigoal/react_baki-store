@@ -14,7 +14,7 @@ const Main = ({setCartItems}) => (
     <main className="main-content">
         <Routes>
             <Route path="/shop/:category" element={page("Shop", <Shop setCartItems={setCartItems}/>)}/>
-            <Route path="/shop" element={ <Navigate to="/shop/all"/> }/>
+            <Route path="/shop" element={page("Shop", <Shop setCartItems={setCartItems}/>)}/>
             <Route path="/sale" element={page("Sale", <Sale/>)}/>
             <Route path="/features" element={page("Features", <Features/>)}/>
             <Route path="/blog" element={page("Blog", <Blog/>)}/>
