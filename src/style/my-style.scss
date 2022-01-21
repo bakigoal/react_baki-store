@@ -17,6 +17,11 @@ a:hover {
   color: #e65540 !important;
 }
 
+li, ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
 p {
   font-family: Montserrat, sans-serif;
   font-size: 15px;

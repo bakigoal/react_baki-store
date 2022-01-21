@@ -1,18 +1,18 @@
 import {Nav} from "react-bootstrap";
-import {useLocation} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import React from "react";
 
 const HeaderNavigation = () => (
     <Nav
         activeKey={useLocation().pathname}
         className="gap-4">
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/shop">Shop</Nav.Link>
-        <Nav.Link href="/sale">Sale</Nav.Link>
-        <Nav.Link href="/features">Features</Nav.Link>
-        <Nav.Link href="/blog">Blog</Nav.Link>
-        <Nav.Link href="/about">About</Nav.Link>
-        <Nav.Link href="/contact">Contact</Nav.Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/shop">Shop</NavLink>
+        <NavLink to="/sale">Sale</NavLink>
+        <NavLink to="/features">Features</NavLink>
+        <NavLink to="/blog">Blog</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
     </Nav>
 )
 

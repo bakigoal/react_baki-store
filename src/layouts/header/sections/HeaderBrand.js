@@ -1,12 +1,12 @@
 import {Image, Navbar} from "react-bootstrap";
-import logo from "../../../assets/images/icons/logo.png";
+import brand from '../../../assets/images/icons/baki-brand.png'
 import React from "react";
 
 const HeaderBrand = () => (
     <Navbar.Brand href="/" className="header-brand ps-4">
-        <Image src={logo}
+        <Image src={brand}
              alt=""
-             height="27"
+             height="30"
              className="d-inline-block align-top"/>
     </Navbar.Brand>
 )
