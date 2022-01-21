@@ -18,7 +18,7 @@ const Shop = ({setCartItems}) => {
             navigate("/shop/all", {replace: true})
         }
     }
-    useEffect(navigateToAllIfNoCategory, [category])
+    useEffect(navigateToAllIfNoCategory, [category, navigate])
 
     const products = productService.getProductsByCategory(category || 'all')
 
