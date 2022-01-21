@@ -1,32 +1,27 @@
 import '../../Blog.scss'
-import TextFormatter from "../../../../utils/TextFormatter";
+import ProductBlock from "../../../../components/ProductBlock";
+import UuidGenerator from "../../../../utils/UuidGenerator";
 
-const BlogSidebarFeaturedProducts = ({products}) => (
-    <div className="pb-5 pt-5">
-        <h4 className="m-text23 pt-65 pb-34">Featured Products</h4>
-                <ul className="p-lg-0">
-                    {products.map(product => {
+const FeaturedProducts = ({products, setCartItems}) => {
+    const sortedProducts = products.sort(() => Math.random() - 0.5)
+    const firstFiveProducts = sortedProducts.splice(0, 5)
 
-                        return (
-                            <li className="flex-w pb-20 ls-none">
-                                <a href="" className="d-block wrap-pic-w w-size22 mr-20 trans-0-4  ">
-                                    <img src={product.image} alt={product.name}/>
-                                </a>
-                                <div className="w-size23 pt-1">
-                                    <a href="" className="s-text20">
-                                        {product.name}
-                                    </a>
-                                    <span className="dis-block s-text17 pt-6">
-                                <span>{TextFormatter.formatCurrency(product.price)}</span>
-                            </span>
-                                </div>
-
+    return (
+        <div className="pb-5 pt-5">
+            <h4 className="m-text23 fw-bold pt-65 pb-34">Featured Products</h4>
+            <ul style={{width: '200px'}}>
+                {
+                    firstFiveProducts.map(product => (
+                            <li key={UuidGenerator.uuid4()}>
+                                <ProductBlock product={product} setCartItems={setCartItems}/>
                             </li>
                         )
-                    })}
+                    )
+                }
+            </ul>
 
-                </ul>
-    </div>
-)
+        </div>
+    )
+}
 
-export default BlogSidebarFeaturedProducts
+export default FeaturedProducts

@@ -7,7 +7,7 @@ import {Col, Row} from "react-bootstrap"
 import {blogService} from "../../service/BlogService"
 import PageTitleBanner from "../../components/PageTitleBanner"
 
-const Blog = () => {
+const Blog = ({setCartItems}) => {
     return (
         <Container fluid>
             <PageTitleBanner img={banner}/>
@@ -16,8 +16,8 @@ const Blog = () => {
                     <Col className="ps-5 pe-5" lg={8}>
                         <BlogList blogs={blogService.getAllBlogs()}/>
                     </Col>
-                    <Col lg={3}>
-                        <BlogSidebar/>
+                    <Col lg={4}>
+                        <BlogSidebar setCartItems={setCartItems}/>
                     </Col>
                 </Row>
             </Container>
