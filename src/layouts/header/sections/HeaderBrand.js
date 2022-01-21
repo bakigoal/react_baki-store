@@ -1,5 +1,4 @@
 import {Image, Navbar} from "react-bootstrap";
-import logo from "../../../assets/images/icons/logo.png";
 import brand from '../../../assets/images/icons/baki-brand.png'
 import React from "react";
 
