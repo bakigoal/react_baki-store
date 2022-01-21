@@ -3,16 +3,16 @@ import {useEffect, useState} from "react";
 const CART_KEY = "cartItems"
 
 const useLocalStorageState = (key, initialValue) => {
-    const [state, setState] = useState(() => {
+    const [value, setValue] = useState(() => {
         const item = localStorage.getItem(key);
         return item ? JSON.parse(item) : initialValue;
     });
 
     useEffect(() => {
-        localStorage.setItem(key, JSON.stringify(state));
-    }, [state]);
+        localStorage.setItem(key, JSON.stringify(value));
+    }, [key, value]);
 
-    return [state, setState];
+    return [value, setValue];
 };
 
 export {useLocalStorageState, CART_KEY}
