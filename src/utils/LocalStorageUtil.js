@@ -1,26 +1,18 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const CART_KEY = "cartItems"
 
 const useLocalStorageState = (key, initialValue) => {
-    const [storedValue, setStoredValue] = useState(() => {
-        try {
-            const item = window.localStorage.getItem(key);
-            return item ? JSON.parse(item) : initialValue;
-        } catch (error) {
-            console.log(error);
-            return initialValue;
-        }
+    const [state, setState] = useState(() => {
+        const item = localStorage.getItem(key);
+        return item ? JSON.parse(item) : initialValue;
     });
 
-    const setValue = (value) => {
-        // Allow value to be a function so we have same API as useState
-        const valueToStore = value instanceof Function ? value(storedValue) : value;
+    useEffect(() => {
+        localStorage.setItem(key, JSON.stringify(state));
+    }, [state]);
 
-        setStoredValue(valueToStore);
-        window.localStorage.setItem(key, JSON.stringify(valueToStore));
-    };
-    return [storedValue, setValue];
+    return [state, setState];
 };
 
 export {useLocalStorageState, CART_KEY}
